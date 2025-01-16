@@ -1,46 +1,55 @@
-# 🎨 Gyalariee - Museum Art Exhibition
+# 🎨 The Met Gyalariee - Portfolio Art Exhibition
 
-Welcome to **Gyalariee**, a React-based digital art gallery that brings museum exhibitions to your screen. Gyalariee integrates with a museum’s API to showcase their vast collection of art, offering a seamless and immersive experience for art lovers around the world.
+Welcome to **theMetGyalariee**, a React-based project designed to serve as both a study exercise and portfolio showcase. This digital gallery highlights the potential of modern web development technologies while offering an engaging platform to display artistic content.
 
 ## 🌟 Project Overview
 
-Gyalariee is designed to be a virtual museum gallery, where users can:
+TheMetGyalariee is a learning-oriented project, aiming to:
 
-- Browse through different art collections.
-- View detailed information about each artwork, including its history and artist.
-- Explore art pieces from various time periods, styles, and cultures.
+- Demonstrate skills in front-end web development using React and Redux.
+- Showcase the ability to create dynamic, visually appealing web applications.
+- Provide a practical example of state management and responsive design implementation.
 
-This project leverages the power of **React** for a smooth, dynamic user interface and an external **museum API** for real-time access to artwork details.
+This project is a fork of [Gyalariee](https://github.com/sandesnp/gyalariee.git), which originated with the same members, including Sandesh Shrestha. The initial project hosted by Sandesh was suspended due to personal priorities. To ensure its conclusion, the project was forked and continued under this repository.
 
 ## ✨ Features
 
-- **Interactive Art Gallery**: Navigate through collections, view individual art pieces, and enjoy a visually appealing, intuitive layout.
-- **Detailed Artwork View**: Click on any artwork to view more information, including the artist's name, creation date, medium, and historical context.
-- **Search and Filter**: Quickly find art by artist, period, style, or keyword.
-- **Responsive Design**: Optimized for desktop and mobile, ensuring a stunning experience on all devices.
+- **Interactive Gallery Layout**: Navigate through an art collection in a seamless and intuitive design.
+- **Detailed Artwork View**: Select an item to view detailed information, including the title, description, and historical context.
+- **Search and Filter**: Quickly find artworks using filters by category, title, or keyword.
+- **Responsive Design**: Optimized for both desktop and mobile devices, ensuring accessibility across platforms.
 
 ## 🚀 Technologies Used
 
-- **React** - Front-end JavaScript library for building user interfaces
-- **Museum API** - Provides access to an extensive database of art pieces
-- **CSS3** - Styled components for a visually engaging design
-- **Axios** - For handling API requests efficiently
+- **HTML** - Markup for structuring the gallery and content.
+- **CSS** - Styled components for an engaging user interface.
+- **React** - Component-based library for building the front-end.
+- **Redux** - State management for handling gallery data efficiently.
+- **Axios** - HTTP client for fetching data locally or externally if required.
+- **Anime.js** - Library for creating smooth animations and transitions.
+
+## 📚 How It Works
+
+- **Component-Based Architecture**: The application is built using reusable React components, making it scalable and maintainable.
+- **State Management**: Redux is used to handle the gallery data, ensuring a predictable and efficient flow of information.
+- **Responsive Design**: The gallery is styled with CSS to provide an optimal viewing experience on any device.
+- **Smooth Animations**: Anime.js enhances the visual appeal by adding smooth transitions and animations.
 
 ## 📷 Preview
 
-![Gyalariee Screenshot](path/to/screenshot.png)
+![TheMetGyalariee Screenshot](path/to/screenshot.png)
 
-> _This is a snapshot of Gyalariee showcasing a gallery view._
+> _A snapshot of theMetGyalariee showcasing a dynamic gallery view._
 
 ## 🛠️ Installation and Setup
 
-To run Gyalariee locally:
+To run theMetGyalariee locally:
 
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/sandesnp/gyalariee.git
-   cd gyalariee
+   git clone https://github.com/engfabiom/themetgyalariee.git
+   cd themetgyalariee
    ```
 
 2. **Install dependencies**
@@ -49,16 +58,7 @@ To run Gyalariee locally:
    npm install
    ```
 
-3. **Set up environment variables**
-
-   - Obtain an API key from the museum’s API provider.
-   - Create a `.env` file in the project root and add your API key:
-
-     ```plaintext
-     REACT_APP_MUSEUM_API_KEY=your_api_key_here
-     ```
-
-4. **Run the app**
+3. **Run the app**
 
    ```bash
    npm start
@@ -66,21 +66,16 @@ To run Gyalariee locally:
 
    The app will start on `http://localhost:3000`.
 
-## 📚 How It Works
+## 🧑‍🔧 Team
 
-- **API Integration**: Gyalariee fetches data from the museum’s API, which includes artwork images, descriptions, and metadata.
-- **Component-Based Architecture**: Built with reusable React components, making it easy to expand or modify features.
-- **State Management**: Manages the gallery and artwork data using React’s state and context.
+- [**Fabio Marques**](https://github.com/engfabiom)
+- [**OrianeORDBS**](https://github.com/OrianeORDS)
+- [**Sandesh Shrestha**](https://github.com/sandesnp)
 
-## 🤝 Team
-
-- **Fabio Marques**
-- **OrianeORDBS**
-
-## 📝 License
+## 📜 License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ---
 
-Enjoy exploring art from the comfort of your screen with **Gyalariee**! 🖼️
+Explore theMetGyalariee and experience the beauty of combining art with technology! 🎮
