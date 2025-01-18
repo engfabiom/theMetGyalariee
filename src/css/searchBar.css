@@ -1,6 +1,6 @@
 .search-bar__container {
   position : relative ; 
-  background-color: var(--color-white);
+  background-color: var(--color-grayscale1);
   min-width: 60rem;
   min-height: 20rem;
   padding: 4rem;
@@ -13,7 +13,9 @@
   display: flex;
   align-items: center;
   padding: 2rem;
-  border-bottom: 2px solid var(--color-black);
+  border-bottom: 2px solid var(--color-grayscale5);
+  background-color: var(--color-grayscale1);
+  
 }
 
 .search-bar__input-text {
@@ -21,19 +23,20 @@
   border: none;
   outline: none;
   font-size: 18px;
-  color: var(--color-black);
   padding: 1rem 0;
+  color: var(--color-grayscale5);
+  background-color: var(--color-grayscale1);
+
 }
 
 .search-bar__input::placeholder {
-  color: var(--color-black);
+  color: var(--color-grayscale5);
   font-family: var(--font-serif-roboto);
 }
 
 .search-bar__input-button {
-  background-color: var(--color-black);
+  background-color: var(--color-grayscale4);
   border: none;
-  color: var(--color-white);
   border-radius: 50%;
   width: 40px;
   height: 40px;
@@ -41,9 +44,10 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  fill: var(--color-grayscale1); 
 }
-.search-bar__button:hover {
-  background-color: var(--color-gray-dark);
+.search-bar__input-button:hover {
+  background-color: var(--color-rosybrown);
 }
 
 .search-bar__categories-box {
@@ -53,7 +57,7 @@
 }
 
 .search-bar__categories-icon {
-  background-color: var(--color-gray-dark);
+  background-color: var(--color-grayscale3);
   border-radius: 50%;
   width: 30px;
   height: 30px;
@@ -61,22 +65,30 @@
   align-items: center;
   justify-content: center;
   font-size: 2rem;
+  fill: var(--color-grayscale5); 
 }
 
 .search-bar__categories-text {
   font-size: 16px;
-  color: #000;
+  color: var(--color-grayscale5);
   padding: 1rem;
   font-size: 1.5rem;
   font-family: var(--font-serif-roboto);
 }
 
 .search-bar__categories-arrow {
-  display: block;
-  margin: auto;
   cursor: pointer;
+  fill : var(--color-grayscale5) ; 
 }
 
+.search-bar__categories-box:hover {
+  .search-bar__categories-icon {
+    background-color: var(--color-rosybrown); }
+  .search-bar__categories-text { 
+    color : var(--color-rosybrown) }
+  .search-bar__categories-arrow {
+      fill : var(--color-rosybrown) }
+}
 
 
 
@@ -88,12 +100,12 @@
   top: 17rem ; 
   left: 20rem; 
   max-height: 20rem;
-  background-color: var(--color-primary);
-  border: 1px solid var(--color-black);
+  background-color: var(--color-grayscale2);
+  border: 1px solid var(--color-grayscale5);
   border-radius: 1rem;
   padding: 2rem;
   gap: 2rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px var(--color-grayscale3) ;
   z-index: 10;
   display: flex;
   flex-direction: column;
@@ -105,7 +117,7 @@
   align-items: center;
   gap: 0.5rem; 
   font-size: 1.4rem;
-  color: var(--color-black);
+  color: var(--color-grayscale5);
   font-family: var(--font-serif-roboto);
   cursor: pointer;
 }
@@ -113,11 +125,11 @@
 .dropdown-menu__checkbox {
   width: 1.5rem;
   height: 1.5rem;
-  accent-color: var(--color-black); 
+  accent-color: var(--color-grayscale5); 
   cursor: pointer;
 }
 
 .dropdown-menu__item:hover {
-  color: var(--color-primary-lighter); 
+  color: var(--color-rosybrown); 
   font-weight: bold;
 }

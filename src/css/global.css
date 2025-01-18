@@ -15,22 +15,67 @@
 
   --background-color: hsl(60, 15%, 90%);
   --primary-text-color: #151515;
+  --font-serif-roboto: 'Roboto Mono', monospace;
+  --font-sans-serif-montserrat: 'Montserrat Alternates', sans-serif;
+
+  /* Do we need red and blue */
+  --color-red: #fb3640;
+  --color-blue: #2978b5;
+  /* to name new colors : use a naming based on a scale or on the purpose : 
+  example : 
+      color-greenscale1 to 5
+      color-url 
+  */ 
+
+}
+
+/* light template */
+[data-theme="light"] {
+
   --toggler-focus: hsl(240, 75%, 50%);
   --toggler-foreground: hsl(60, 75%, 75%);
   --toggler-background: hsl(60, 75%, 45%);
   --color-grayscale4: hsl(0,0%,90%);
+
+
+  --color-grayscale1: hsl(0, 0%, 100%);
+  --color-grayscale2: hsl(60, 15%, 90%);
+  --color-grayscale3: hsl(198,10%,45%);
+  --color-grayscale4: hsl(0,0%,15%);
+  --color-grayscale5: hsl(0,0%,0%);
+
+  --color-rosybrown: hsl(359,38%,67%);
+
 }
+
 
 /* dark" template */
 [data-theme="dark"] {
-  --background-color: hsl(240, 75%, 5%);
-  --primary-text-color: #f9f3f3;
+
   --toggler-focus: hsl(60, 75%, 50%);
   --toggler-foreground: hsl(240, 75%, 75%);
   --toggler-background: hsl(240, 75%, 45%);
-  --color-black: white;
-  --color-white: black;
+
+  --color-grayscale1: hsl(0,0%,0%);
+  --color-grayscale2: hsl(0,0%,15%);
+  --color-grayscale3: hsl(198,10%,45%);
+  --color-grayscale4: hsl(60, 15%, 90%);
+  --color-grayscale5: hsl(0, 0%, 100%);
+
+  --color-rosybrown: hsl(359,38%,67%);
+
+
+/*
+previously there was a scale of rosybrown in the global. I am note sure we need it. 
+rosybrown below renders well with both light and dark modes   
+  --color-rosybrown1: hsl(359,38%,67%); 
+  --color-rosybrown2: hsl(17,73%,85%) ; 
+  --color-rosybrown3: hsl(16,33%,94%);
+
+*/
+
   --color-grayscale4: hsl(0,0%,15%);
+  --primary-text-color: hsl(0, 0%, 88%);
 }
 
 *,

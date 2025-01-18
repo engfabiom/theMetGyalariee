@@ -20,6 +20,8 @@ const App = () => {
     getRandomArrayObj(10, theMetObjects, setTheMetObject);
   }
 
+  console.log(theMetObjects);
+  
   return (
     <div id="app" className="app" data-theme={isDarkTheme ? "dark" : "light"}>
       <h1>Gyalariee</h1>

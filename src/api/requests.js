@@ -10,11 +10,11 @@ const apiSearch = async ({
     const axiosquery = `https://collectionapi.metmuseum.org/public/collection/v1/search`;
     const response = await axios.get(axiosquery, {
       params: {
+        ...params,
         hasImages: true,
         isHighlight,
         isOnView,
         q,
-        ...params,
       },
     });
     return response.data.objectIDs;
