@@ -16,4 +16,3 @@ const ThemeToggler = ({ setIsDarkTheme, isDarkTheme }) => {
   };
   
   export default ThemeToggler;
-  

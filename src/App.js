@@ -26,8 +26,7 @@ const App = () => {
     <div id="app" className="app" data-theme={isDarkTheme ? "dark" : "light"}>
       <h1>Gyalariee</h1>
       <ThemeToggler setIsDarkTheme={setIsDarkTheme} isDarkTheme={isDarkTheme} />
-      <Search setTheMetObject={setTheMetObject} tmo={theMetObjects} />
-      <button onClick={extraObjects} style={{margin: "2rem 4rem", padding: "1rem 2rem"}}>Add More Objects</button>
+      <Search setTheMetObject={setTheMetObject} tmo={theMetObjects} extra={extraObjects}/>
       {/* <Display {...object}/> */}
     </div>
   );

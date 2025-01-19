@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { apiSearch } from "../api/requests";
 
+/* TODO: SEARCH FUNCTION, REVIEW IT AFTER REDUX IMPLEMENTATION / REFACTORING  */
+
 function SearchBar({ setTheMetObject, onSearch }) {
   /*   TOGLE AND OPEN THE DROPDOWN MENU  */
   const [isMenuOpen, setIsMenuOpen] = useState(false);
