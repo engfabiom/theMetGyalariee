@@ -1,16 +1,17 @@
-# 🎨 The Met Gyalariee - Portfolio Art Exhibition
+# MetExp - The Met Museum Explorer
 
-Welcome to **theMetGyalariee**, a React-based project designed to serve as both a study exercise and portfolio showcase. This digital gallery highlights the potential of modern web development technologies while offering an engaging platform to display artistic content.
+Welcome to **MetExp**, a React-based project designed to serve as both a study exercise and portfolio showcase. This digital gallery highlights the potential of modern web development technologies while offering an engaging platform to display artistic content.
 
 ## 🌟 Project Overview
 
-TheMetGyalariee is a learning-oriented project, aiming to:
+MetExp is a learning-oriented project, aiming to:
 
 - Demonstrate skills in front-end web development using React and Redux.
 - Showcase the ability to create dynamic, visually appealing web applications.
 - Provide a practical example of state management and responsive design implementation.
 
-This project is a fork of [Gyalariee](https://github.com/sandesnp/gyalariee.git), which originated with the same members, including Sandesh Shrestha. The initial project hosted by Sandesh was suspended due to personal priorities. To ensure its conclusion, the project was forked and continued under this repository.
+This project is a fork of [Gyalariee](https://github.com/sandesnp/gyalariee.git), which originated with the same members, including Sandesh Shrestha. 
+The initial project hosted by Sandesh was suspended due to personal priorities. To ensure its conclusion, the project was forked and continued under this repository.
 
 ## ✨ Features
 
@@ -48,8 +49,8 @@ To run theMetGyalariee locally:
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/engfabiom/themetgyalariee.git
-   cd themetgyalariee
+   git clone https://github.com/engfabiom/metexp.git
+   cd metexp
    ```
 
 2. **Install dependencies**
@@ -78,4 +79,4 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ---
 
-Explore theMetGyalariee and experience the beauty of combining art with technology! 🎮
+Explore MetExp and experience the beauty of combining art with technology! 🎮
