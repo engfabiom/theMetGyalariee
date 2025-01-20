@@ -34,8 +34,8 @@ export default function SearchItems() {
               halfSizeCounter = 3 - halfSizeCounter;
             if (obj.orientation !== "portrait" && halfSizeCounter > 0) {
               halfSizeCounter--;
-              obj.orientation = "half-landscape";
-            }
+              obj.orientation = "square";
+            } else { "something diferent happened"}
             return <CardObject key={obj.objectID} tmo={obj} />;
           })}
       </div>
