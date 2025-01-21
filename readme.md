@@ -1,10 +1,10 @@
-# 🎨 The Met Gyalariee - Portfolio Art Exhibition
+# 🎨 MetExp - The Met Museum Explorer
 
-Welcome to **theMetGyalariee**, a React-based project designed to serve as both a study exercise and portfolio showcase. This digital gallery highlights the potential of modern web development technologies while offering an engaging platform to display artistic content.
+Welcome to **MetExp**, a React-based project designed to serve as both a study exercise and portfolio showcase. This digital gallery highlights the potential of modern web development technologies while offering an engaging platform to display artistic content.
 
 ## 🌟 Project Overview
 
-TheMetGyalariee is a learning-oriented project, aiming to:
+MetExp is a learning-oriented project, aiming to:
 
 - Demonstrate skills in front-end web development using React and Redux.
 - Showcase the ability to create dynamic, visually appealing web applications.
@@ -37,19 +37,19 @@ This project is a fork of [Gyalariee](https://github.com/sandesnp/gyalariee.git)
 
 ## 📷 Preview
 
-![TheMetGyalariee Screenshot](path/to/screenshot.png)
+![MetExp Screenshot](path/to/screenshot.png)
 
 > _A snapshot of theMetGyalariee showcasing a dynamic gallery view._
 
 ## 🛠️ Installation and Setup
 
-To run theMetGyalariee locally:
+To run MetExp locally:
 
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/engfabiom/themetgyalariee.git
-   cd themetgyalariee
+   git clone https://github.com/engfabiom/MetExp.git
+   cd MetExp
    ```
 
 2. **Install dependencies**
@@ -78,4 +78,4 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ---
 
-Explore theMetGyalariee and experience the beauty of combining art with technology! 🎮
+Explore MetExp and experience the beauty of combining art with technology! 🎮
