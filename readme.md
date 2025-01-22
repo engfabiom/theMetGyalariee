@@ -37,9 +37,10 @@ This project is a fork of [Gyalariee](https://github.com/sandesnp/gyalariee.git)
 
 ## 📷 Preview
 
-![MetExp Screenshot](path/to/screenshot.png)
+![MetExp Light Theme Screenshot](./src/assets/images/screenshot1.png)
+![MetExp Dark Theme Screenshot](./src/assets/images/screenshot2.png)
 
-> _A snapshot of theMetGyalariee showcasing a dynamic gallery view._
+> _Light and Dark snapshots of MetExp showcasing a dynamic gallery view._
 
 ## 🛠️ Installation and Setup
 
