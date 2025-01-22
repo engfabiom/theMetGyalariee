@@ -10,12 +10,10 @@ import store from "./redux/store.js";
 console.clear();
 
 import { apiSearch , apiGetDepartments} from "./api/requests";
-import { theMetSetSearchResult, theMetSetDepartments } from "./redux/theMet/actions";
+import { theMetSetSearchResult, theMetSetDepartments } from "./redux/rootActions";
 
-// const randomArray = async (n) => Array.from(new Set([...Array(n).keys()].map(e=>Math.floor(Math.random()*n*10)+1).sort((a,b)=>a-b)));
-
-store.dispatch(theMetSetSearchResult(apiSearch)); //apiGetAllObjects 
-store.dispatch(theMetSetDepartments(apiGetDepartments));//apiGetDepartments
+store.dispatch(theMetSetSearchResult(apiSearch));  
+store.dispatch(theMetSetDepartments(apiGetDepartments));
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
