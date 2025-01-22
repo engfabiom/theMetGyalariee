@@ -70,4 +70,8 @@ body,
   color: var(--primary-text-color);
   background-color: var(--background-color);
   font-family: var(--font-sans-serif-montserrat);
+  padding: 2rem;
+  & > h1 {
+    margin-bottom: 2rem;
+  }
 }

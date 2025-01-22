@@ -1,20 +1,25 @@
 import ObjectsTypes from "./action-types";
 
-const initialState = [];
+const initialState = {
+  pending: false,
+  fulfilled: false,
+  rejected: false,
+  objects: [],
+};
 
 const objectsReducer = (state = initialState, action) => {
-  let objectsParam = action.payload;
+  let objectsPayload = action.payload;
   switch (action.type) {
     case ObjectsTypes.ADD_OBJECTS + "_PENDING":
-      return state;
+      return {...state, pending: true};
     case ObjectsTypes.ADD_OBJECTS + "_FULFILLED":
-      return [...state, ...objectsParam];
+      return {...state, pending: false, fulfilled: true, objects: [...state.objects,...objectsPayload]};
     case ObjectsTypes.DROP_OBJECT:
-      return [...state].filter((o) => o.ObjectID !== this, objectsParam);
+      return {...state, objects: [...state.objects].filter((o) => o.ObjectID !== this, objectsPayload)};
     case ObjectsTypes.ADD_OBJECTS + "_REJECTED":
-      return state;
+      return {...state, rejected: true};
     case ObjectsTypes.CLEAN_OBJECTS:
-        return [];
+        return {...state, fulfilled: true, objects:[]};
 
     default:
       return state;
