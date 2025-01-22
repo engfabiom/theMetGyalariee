@@ -1,12 +1,15 @@
 import ObjectsTypes from "./action-types";
 
-const theMetAddObject = (payload) => ({
-  type: ObjectsTypes.ADD_OBJECT,
+export const theMetAddObjects = (payload) => ({
+  type: ObjectsTypes.ADD_OBJECTS,
   payload,
 });
-const theMetDropObject = (payload) => ({
+
+export const theMetDropObject = (payload) => ({
   type: ObjectsTypes.DROP_OBJECT,
   payload,
 });
 
-export { theMetAddObject, theMetDropObject };
+export const theMetCleanObjects = () => ({
+  type: ObjectsTypes.CLEAN_OBJECTS,
+});

@@ -2,7 +2,7 @@ import { combineReducers } from "redux";
 import allObjectsReducer from "./allObjects/reducer";
 import departmentsReducer from "./departments/reducer";
 import objectsReducer from "./objects/reducer";
-import searchResultReducer from "./searchResult/reducer";
+import searchResultReducer from "./searchObjects/reducer";
 
 const theMetReducer = combineReducers({
   allObjectsReducer,

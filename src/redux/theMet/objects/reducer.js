@@ -1,26 +1,20 @@
 import ObjectsTypes from "./action-types";
-import {apiGetObject} from "../../../api/requests";
 
-const initialState = {
-  objects: [],
-};
+const initialState = [];
 
-const objectsReducer = async (state = initialState, action) => {
+const objectsReducer = (state = initialState, action) => {
+  let objectsParam = action.payload;
   switch (action.type) {
-    case ObjectsTypes.ADD_OBJECT:
-      let object = await apiGetObject(action.payload.ObjectID);
-      return { ...state, objects: [...state.objects, object] };
-
+    case ObjectsTypes.ADD_OBJECTS + "_PENDING":
+      return state;
+    case ObjectsTypes.ADD_OBJECTS + "_FULFILLED":
+      return [...state, ...objectsParam];
     case ObjectsTypes.DROP_OBJECT:
-      newAllObjects = (new Set(state.theMetAllObjects)).delete(action.payload.ObjectID);
-      newSearchResult = (new Set(state.theMetSearchResult)).delete(action.payload.ObjectID);
-      newObjects = [...state.theMetObjects].filter((o) => o.ObjectID !== action.payload.ObjectID);
-      return {
-        ...state,
-        theMetAllObjects: [newAllObjects],
-        theMetSearchResult: new Set(newSearchResult),
-        theMetObjects: [...newObjects],
-      };
+      return [...state].filter((o) => o.ObjectID !== this, objectsParam);
+    case ObjectsTypes.ADD_OBJECTS + "_REJECTED":
+      return state;
+    case ObjectsTypes.CLEAN_OBJECTS:
+        return [];
 
     default:
       return state;

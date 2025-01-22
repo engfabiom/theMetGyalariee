@@ -1,11 +1,11 @@
-import { theMetGetAllObjects, theMetCleanAllObjects } from "./allObjects/actions";
-export { theMetGetAllObjects, theMetCleanAllObjects };
+import { theMetSetAllObjects, theMetCleanAllObjects } from "./allObjects/actions";
+export { theMetSetAllObjects, theMetCleanAllObjects };
 
-import { theMetGetDepartments } from "./departments/actions";
-export { theMetGetDepartments };
+import { theMetSetDepartments, theMetCleanDepartments } from "./departments/actions";
+export { theMetSetDepartments, theMetCleanDepartments };
 
-import { theMetAddObject, theMetDropObject } from "./objects/actions";
-export { theMetAddObject, theMetDropObject };
+import { theMetAddObjects, theMetDropObject, theMetCleanObjects } from "./objects/actions";
+export { theMetAddObjects, theMetDropObject, theMetCleanObjects };
 
-import {theMetSearchObjects} from "./searchResult/actions";
-export {theMetSearchObjects};
+import {theMetSetSearchResult, theMetCleanSearch} from "./searchObjects/actions";
+export {theMetSetSearchResult, theMetCleanSearch};

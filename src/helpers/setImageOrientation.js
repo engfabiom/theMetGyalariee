@@ -9,6 +9,7 @@ export const setImageOrientation = async (object) => {
     console.error(`Error getting image size:`, error);
     console.error(`setting [${object.primaryImageSmall}] to landscape orientation`);
     object.orientation = "landscape";
+    return null;
   }
   return object;
 };

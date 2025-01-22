@@ -79,7 +79,7 @@
     width: 100%;
   }
   .card-image {
-    /* height: 34rem; */
+    height: 34rem;
     img {
       object-fit: cover;
     }

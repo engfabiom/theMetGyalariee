@@ -1,7 +1,9 @@
 import DepartmentsTypes from "./action-types";
 
-const theMetGetDepartments = () => ({
-  type: DepartmentsTypes.GET_DEPARTMENTS,
+export const theMetSetDepartments = (payload) => ({
+  type: DepartmentsTypes.SET_DEPARTMENTS,
+  payload,
 });
-
-export {theMetGetDepartments}
+export const theMetCleanDepartments = () => ({
+  type: DepartmentsTypes.CLEAN_DEPARTMENTS,
+});

@@ -1,10 +1,11 @@
 import AllObjectsTypes from "./action-types";
 
-const theMetGetAllObjects = () => ({
-  type: AllObjectsTypes.GET_ALL_OBJECTS,
+export const theMetSetAllObjects = (payload) => ({
+  type: AllObjectsTypes.SET_ALL_OBJECTS,
+  payload,
 });
-const theMetCleanAllObjects = () => ({
-  type: AllObjectsTypes.CLEAN_OBJECTS,
+export const theMetCleanAllObjects = () => ({
+  type: AllObjectsTypes.CLEAN_ALL_OBJECTS,
 });
 
-export { theMetGetAllObjects, theMetCleanAllObjects };
+

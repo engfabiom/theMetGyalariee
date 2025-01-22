@@ -7,7 +7,6 @@ export default function Search(props) {
     <div className="search-container">
       <SearchBar />
       <SearchItems />
-      <button className="btn__add-more-objects">Add More Objects</button>
     </div>
   );
 }
