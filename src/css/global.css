@@ -1,39 +1,46 @@
+:root {
+  --font-serif-roboto: 'Roboto Mono', monospace;
+  --font-sans-serif-montserrat: 'Montserrat Alternates', sans-serif;
+}
+
+/* to name new colors : use a naming based on a scale or on the purpose : 
+example : 
+    color-greenscale1 to 5
+    color-url 
+*/ 
+
 /* light template (default) */
-:root,
 [data-theme="light"] {
   color-scheme: light;
-  --font-serif-roboto: "Roboto Mono", monospace;
-  --font-sans-serif-montserrat: "Montserrat Alternates", sans-serif;
 
-  --primary-text-color: hsl(0, 0%, 10%);
-  --secondary-text-color: hsl(0, 0%, 90%);
-  --background-color: hsl(60, 5%, 90%);
-  --color-grayscale1: hsl(60, 5%, 75%);
-  --color-grayscale2: hsl(60, 5%, 60%);
-  --color-grayscale3: hsl(60, 5%, 45%);
-  --color-grayscale4: hsl(60, 5%, 30%);
-  --color-grayscale5: hsl(60, 5%, 15%);
-  --color-hover: hsl(360, 40%, 50%);
   --toggler-focus: hsl(240, 75%, 50%);
   --toggler-foreground: hsl(60, 75%, 75%);
   --toggler-background: hsl(60, 75%, 45%);
+
+  --color-grayscale1: hsl(0, 0%, 100%);
+  --color-grayscale2: hsl(60, 15%, 90%);
+  --color-grayscale3: hsl(198,10%,45%);
+  --color-grayscale4: hsl(0,0%,15%);
+  --color-grayscale5: hsl(0,0%,0%);
+
+  --color-rosybrown: hsl(359,38%,67%);
+
 }
 
 /* dark template */
 [data-theme="dark"] {
-  color-scheme: dark;
-  --primary-text-color: hsl(0, 0%, 90%);
-  --secondary-text-color: hsl(0, 0%, 10%);
-  --background-color: hsl(60, 10%, 10%);
-  --color-grayscale1: hsl(60, 5%, 15%);
-  --color-grayscale2: hsl(60, 5%, 30%);
-  --color-grayscale3: hsl(60, 5%, 45%);
-  --color-grayscale4: hsl(60, 5%, 60%);
-  --color-grayscale5: hsl(60, 5%, 75%);
-  --color-hover: hsl(360, 40%, 67%);
+  color-scheme: dark; 
   --toggler-focus: hsl(60, 75%, 50%);
   --toggler-foreground: hsl(240, 75%, 75%);
   --toggler-background: hsl(240, 75%, 45%);
+
+  --color-grayscale1: hsl(0,0%,0%);
+  --color-grayscale2: hsl(0,0%,15%);
+  --color-grayscale3: hsl(198,10%,45%);
+  --color-grayscale4: hsl(60, 15%, 90%);
+  --color-grayscale5: hsl(0, 0%, 100%);
+
+  --color-rosybrown: hsl(359,38%,67%);
 }
 
 *,

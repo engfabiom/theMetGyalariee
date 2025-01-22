@@ -1,0 +1,21 @@
+
+
+.website-header__container { 
+    display: flex ;
+    flex-direction: column;
+}
+.website-header__text { 
+    width: 80%;
+    padding: 3rem;
+}
+.website-header__text__title {
+    font-size: xx-large;
+    font-weight: 600;
+    font-family : var(--font-serif-roboto);
+    padding: 3rem;
+}
+.website-header__text_descr { 
+    font-size: larger;
+    font-weight: 600;
+    padding: 3rem;
+}

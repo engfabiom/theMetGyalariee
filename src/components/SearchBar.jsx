@@ -12,12 +12,6 @@ function SearchBar({ setTheMetObject }) {
     isOnView: false,
   });
 
-  // function handleCheck(event) {
-  //   const { name, checked } = event.target;
-  //   setAreChecked((preValue) => {
-  //     return { ...preValue, [name]: checked };
-  //   });
-  // }
 
   function handleChange(event) {
     const { type, name, value, checked } = event.target;

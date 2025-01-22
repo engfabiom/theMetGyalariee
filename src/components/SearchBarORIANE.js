@@ -1,7 +1,7 @@
 import React, {useState} from "react"; 
 import {apiGetAll} from "../API/requests" ; 
 
-function SearchBar({onSearch}){
+function SearchBarOriane({onSearch}){
 
     /*   TOGLE AND OPEN THE DROPDOWN MENU  */
     const [isMenuOpen, setIsMenuOpen] = useState(false);
