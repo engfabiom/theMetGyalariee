@@ -47,7 +47,7 @@
   fill: var(--color-grayscale1); 
 }
 .search-bar__input-button:hover {
-  background-color: var(--color-rosybrown);
+  background-color: var(--color-rosybrown222);
 }
 
 .search-bar__categories-box {
@@ -83,11 +83,11 @@
 
 .search-bar__categories-box:hover {
   .search-bar__categories-icon {
-    background-color: var(--color-rosybrown); }
+    background-color: var(--color-rosybrown222); }
   .search-bar__categories-text { 
-    color : var(--color-rosybrown) }
+    color : var(--color-rosybrown22) }
   .search-bar__categories-arrow {
-      fill : var(--color-rosybrown) }
+      fill : var(--color-rosybrown22) }
 }
 
 
@@ -130,6 +130,6 @@
 }
 
 .dropdown-menu__item:hover {
-  color: var(--color-rosybrown); 
+  color: var(--color-rosybrown22); 
   font-weight: bold;
 }

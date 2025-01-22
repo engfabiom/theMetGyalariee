@@ -1,5 +1,4 @@
 
-
 .website-header__container { 
     display: flex ;
     flex-direction: column;
@@ -10,12 +9,16 @@
 }
 .website-header__text__title {
     font-size: xx-large;
-    font-weight: 600;
+    text-transform: uppercase;
+    font-weight: 800;
     font-family : var(--font-serif-roboto);
-    padding: 3rem;
+    padding: 3rem  0; 
+    color: var(--color-rosybrown2);
+    text-shadow: 0.1px 0.1px 5px var(--color-rosybrown1); 
 }
+
 .website-header__text_descr { 
-    font-size: larger;
+    font-size: x-large;
     font-weight: 600;
-    padding: 3rem;
+    padding: 3rem 0; 
 }

@@ -7,7 +7,7 @@ export default function WebsiteHeader () {
     return ( 
     <div className='website-header__container'> 
         <div className='website-header__text'> 
-            <h1 className='website-header__text__title'> MetExp : the Met museum explorer </h1>
+            <h1 className='website-header__text__title'> MetExp : The Met Museum Explorer </h1>
             <p className='website-header__text__descr'>
                 Add here a description laurem ipsum. 
                 <br/> 

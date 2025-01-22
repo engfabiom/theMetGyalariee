@@ -1,21 +1,25 @@
+
+/* ========== DEFINE GLOBAL VARIABLES ============== */
+
+/* FONTS*/ 
 :root {
   --font-serif-roboto: 'Roboto Mono', monospace;
   --font-sans-serif-montserrat: 'Montserrat Alternates', sans-serif;
 }
 
-/* to name new colors : use a naming based on a scale or on the purpose : 
+
+/* COLORS */
+
+/* Naming new colors => base name on a color-scale or on the color's purpose : 
 example : 
     color-greenscale1 to 5
     color-url 
 */ 
 
-/* light template (default) */
+/* colors 1/2 ==> LIGHT TEMPLATE (default) */
+
 [data-theme="light"] {
   color-scheme: light;
-
-  --toggler-focus: hsl(240, 75%, 50%);
-  --toggler-foreground: hsl(60, 75%, 75%);
-  --toggler-background: hsl(60, 75%, 45%);
 
   --color-grayscale1: hsl(0, 0%, 100%);
   --color-grayscale2: hsl(60, 15%, 90%);
@@ -23,16 +27,16 @@ example :
   --color-grayscale4: hsl(0,0%,15%);
   --color-grayscale5: hsl(0,0%,0%);
 
-  --color-rosybrown: hsl(359,38%,67%);
-
+  --color-rosybrown1: hsl(17,38%,70%) ; 
+  --color-rosybrown2: hsl(359,38%,67%);
+  --color-rosybrown3: hsl(360,38%,50%);
 }
 
-/* dark template */
+
+
+/* colors 2/2 ==>  DARKE TEMPLATE */
 [data-theme="dark"] {
   color-scheme: dark; 
-  --toggler-focus: hsl(60, 75%, 50%);
-  --toggler-foreground: hsl(240, 75%, 75%);
-  --toggler-background: hsl(240, 75%, 45%);
 
   --color-grayscale1: hsl(0,0%,0%);
   --color-grayscale2: hsl(0,0%,15%);
@@ -40,8 +44,16 @@ example :
   --color-grayscale4: hsl(60, 15%, 90%);
   --color-grayscale5: hsl(0, 0%, 100%);
 
-  --color-rosybrown: hsl(359,38%,67%);
+  --color-rosybrown1: hsl(360,38%,50%);
+  --color-rosybrown2: hsl(359,38%,67%); 
+  --color-rosybrown3: hsl(17,38%,70%) ; 
+
 }
+
+
+
+
+/* ========= DEFINE GLOBAL STYLING ========= */ 
 
 *,
 *::before,
@@ -56,29 +68,23 @@ html {
   font-size: 62.5%; /* So 1 rem = 10px */
 }
 
-body {
+html, body, #root, #app {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
   box-sizing: border-box;
+}
+
+#app {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  position: relative;
   font-weight: 400;
   font-family: var(--font-sans-serif-montserrat);
   font-size: 1.6rem;
+  color: var(--color-grayscale5);
+  background-color: var(--color-grayscale1) ; 
 }
 
-html,
-body,
-#root {
-  /* Making sure main container takes full screen height */
-  position: relative;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-#app {
-  flex: 1;
-  color: var(--primary-text-color);
-  background-color: var(--background-color);
-  font-family: var(--font-sans-serif-montserrat);
-  padding: 2rem;
-  & > h1 {
-    margin-bottom: 2rem;
-  }
-}
