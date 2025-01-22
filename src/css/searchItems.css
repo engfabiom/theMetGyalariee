@@ -30,6 +30,7 @@
   &:disabled, 
   &[disabled] {
     color: var(--color-grayscale3);
+    cursor: wait;
     background-color: var(--color-grayscale1);
     box-shadow: none;
   }
