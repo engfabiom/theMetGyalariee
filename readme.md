@@ -1,4 +1,4 @@
-# MetExp - The Met Museum Explorer
+# 🎨 MetExp - The Met Museum Explorer
 
 Welcome to **MetExp**, a React-based project designed to serve as both a study exercise and portfolio showcase. This digital gallery highlights the potential of modern web development technologies while offering an engaging platform to display artistic content.
 
@@ -10,8 +10,7 @@ MetExp is a learning-oriented project, aiming to:
 - Showcase the ability to create dynamic, visually appealing web applications.
 - Provide a practical example of state management and responsive design implementation.
 
-This project is a fork of [Gyalariee](https://github.com/sandesnp/gyalariee.git), which originated with the same members, including Sandesh Shrestha. 
-The initial project hosted by Sandesh was suspended due to personal priorities. To ensure its conclusion, the project was forked and continued under this repository.
+This project is a fork of [Gyalariee](https://github.com/sandesnp/gyalariee.git), which originated with the same members, including Sandesh Shrestha. The initial project hosted by Sandesh was suspended due to personal priorities. To ensure its conclusion, the project was forked and continued under this repository.
 
 ## ✨ Features
 
@@ -38,19 +37,20 @@ The initial project hosted by Sandesh was suspended due to personal priorities. 
 
 ## 📷 Preview
 
-![TheMetGyalariee Screenshot](path/to/screenshot.png)
+![MetExp Light Theme Screenshot](./public/images/screenshots/screenshot1.png)
+![MetExp Dark Theme Screenshot](./public/images/screenshots/screenshot2.png)
 
-> _A snapshot of theMetGyalariee showcasing a dynamic gallery view._
+> _Light and Dark snapshots of MetExp showcasing a dynamic gallery view._
 
 ## 🛠️ Installation and Setup
 
-To run theMetGyalariee locally:
+To run MetExp locally:
 
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/engfabiom/metexp.git
-   cd metexp
+   git clone https://github.com/engfabiom/MetExp.git
+   cd MetExp
    ```
 
 2. **Install dependencies**
