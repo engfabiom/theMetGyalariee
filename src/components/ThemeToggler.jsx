@@ -1,3 +1,5 @@
+import "../css/themeToggler.css";
+
 const ThemeToggler = ({ setIsDarkTheme, isDarkTheme }) => {
     return (
       <div className="theme-toggler">

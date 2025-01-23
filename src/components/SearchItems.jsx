@@ -18,9 +18,10 @@ export default function SearchItems() {
       halfSizeCounter = 3 - halfSizeCounter;
     if (obj.orientation !== "portrait" && halfSizeCounter > 0) {
       halfSizeCounter--;
-      obj.orientation = "half-landscape";
-    }
+      obj.orientation = "half-landscape"; // square
+    } else { console.log("something diferent happened")}
   });
+
 
   const addObjects = (quantity) => {
     dispatch(theMetAddObjects(getUniqueRandom(theMetObjects, searchResult, quantity)));

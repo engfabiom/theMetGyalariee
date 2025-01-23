@@ -1,9 +1,0 @@
-@import url('./global.css');
-
-/* Controls */
-@import url('./themeToggler.css');
-
-/* Components */
-@import url('./potraitCard.css');
-@import url('./landscapeCard.css');
-@import url('./searchBar.css');

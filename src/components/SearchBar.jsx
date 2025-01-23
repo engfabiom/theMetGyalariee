@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { apiSearch } from "../api/requests";
+import "../css/searchBar.css";
 
-/* TODO: SEARCH FUNCTION, REVIEW IT AFTER REDUX IMPLEMENTATION / REFACTORING  */
 
 function SearchBar({ setTheMetObject, onSearch }) {
   /*   TOGLE AND OPEN THE DROPDOWN MENU  */
@@ -26,8 +26,7 @@ function SearchBar({ setTheMetObject, onSearch }) {
   }
 
   function handleSearch() {
-    // Vérifie si la recherche n'est pas vide
-    userQ.trim() && newQ(); // Appelle la fonction newQ si userQ contient quelque chose
+    userQ.trim() && newQ(); 
   }
 
   /* SEARCH BAR > track query in SearchBar area */
