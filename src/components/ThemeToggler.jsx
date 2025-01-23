@@ -1,4 +1,5 @@
 import "../css/themeToggler.css";
+import "../css/themeColors/themeDark.css";
 
 const ThemeToggler = ({ setIsDarkTheme, isDarkTheme }) => {
     return (
@@ -10,7 +11,7 @@ const ThemeToggler = ({ setIsDarkTheme, isDarkTheme }) => {
             onChange={() => setIsDarkTheme((prev) => !prev)}
             checked={isDarkTheme}
           />
-          {isDarkTheme ? "Dark" : "Light"} Theme
+          {isDarkTheme ? "Dark" : "Light"}
           <span></span>
         </label>
       </div>

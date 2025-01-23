@@ -1,0 +1,11 @@
+[data-theme="dark"] {
+  --color-grayscale1: hsl(0, 0%, 0%);
+  --color-grayscale2: hsl(0, 0%, 15%);
+  --color-grayscale3: hsl(198, 10%, 45%);
+  --color-grayscale4: hsl(60, 15%, 90%);
+  --color-grayscale5: hsl(0, 0%, 100%);
+
+  --color-rosybrown1: hsl(360, 38%, 50%);
+  --color-rosybrown2: hsl(359, 38%, 67%);
+  --color-rosybrown3: hsl(17, 38%, 70%);
+}

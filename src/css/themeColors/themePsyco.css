@@ -1,0 +1,12 @@
+[data-theme="psyco"] {
+  --color-grayscale1: hsl(51, 33%, 90%);
+  --color-grayscale2: hsl(103, 33%, 75%);
+  --color-grayscale3: hsl(154, 33%, 60%);
+  --color-grayscale4: hsl(206, 33%, 45%);
+  --color-grayscale5: hsl(257, 33%, 30%);
+  --color-grayscale6: hsl(309, 33%, 15%);
+
+  --color-rosybrown1: hsl(17, 38%, 70%);
+  --color-rosybrown2: hsl(359, 38%, 67%);
+  --color-rosybrown3: hsl(360, 38%, 50%);
+}
