@@ -9,8 +9,11 @@ import CardObject from "./CardObject";
 export default function SearchItems() {
   const dispatch = useDispatch();
 
-  const { searchResult } = useSelector((reducer) => reducer.theMetReducer.searchResultReducer);
-  const { pending: loadingTMO, fulfilled: fulfilledTMO, objects: theMetObjects} = useSelector((reducer) => reducer.theMetReducer.objectsReducer);
+  const { data: searchResult } = useSelector((reducer) => reducer.theMetReducer.searchResultReducer);
+  const { status, data: theMetObjects} = useSelector((reducer) => reducer.theMetReducer.objectsReducer);
+  console.log(status, theMetObjects);
+  let loadingTMO = status === "pending";
+  let fulfilledTMO = status === "fulfilled";
 
   let halfSizeCounter = 0;
   fulfilledTMO && theMetObjects.map((obj) => {
@@ -19,12 +22,13 @@ export default function SearchItems() {
     if (obj.orientation !== "portrait" && halfSizeCounter > 0) {
       halfSizeCounter--;
       obj.orientation = "half-landscape"; // square
-    } else { console.log("something diferent happened")}
+    } 
   });
 
 
   const addObjects = (quantity) => {
-    dispatch(theMetAddObjects(getUniqueRandom(theMetObjects, searchResult, quantity)));
+    let payload = getUniqueRandom(theMetObjects, searchResult, quantity)
+    dispatch(theMetAddObjects(payload));
   };
 
   useEffect(() => {

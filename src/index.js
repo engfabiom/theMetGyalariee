@@ -10,10 +10,11 @@ import store from "./redux/store.js";
 console.clear();
 
 import { apiSearch , apiGetDepartments} from "./api/requests";
-import { theMetSetSearchResult, theMetSetDepartments } from "./redux/rootActions";
+import { theMetSetSearchResult, theMetSetDepartments, theMetCleanAllObjects } from "./redux/rootActions";
 
-store.dispatch(theMetSetSearchResult(apiSearch));  
-store.dispatch(theMetSetDepartments(apiGetDepartments));
+store.dispatch(theMetCleanAllObjects());
+store.dispatch(theMetSetSearchResult(apiSearch()));
+// store.dispatch(theMetSetDepartments(apiGetDepartments));
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
