@@ -20,7 +20,7 @@ const objectsReducer = (state = initialState, action) => {
     case ObjectsTypes.CLEAN_OBJECTS + "_FULFILLED":
       return { ...state, status: "fulfilled", error: null, data: [] };
 
-    case DepartmentsTypes.ADD_OBJECTS + "_FULFILLED":
+    case ObjectsTypes.ADD_OBJECTS + "_FULFILLED":
       return {...state, status: "fulfilled", error: null, data: action.payload };
 
     case ObjectsTypes.DROP_OBJECT + "_FULFILLED":
