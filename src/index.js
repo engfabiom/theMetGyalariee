@@ -7,14 +7,12 @@ import App from "./App";
 import { Provider } from "react-redux";
 import store from "./redux/store.js";
 
+import { apiSearch } from "./api/requests";
+import { theMetSetSearchResult } from "./redux/rootActions";
+
 console.clear();
 
-import { apiSearch , apiGetDepartments} from "./api/requests";
-import { theMetSetSearchResult, theMetSetDepartments, theMetCleanAllObjects } from "./redux/rootActions";
-
-store.dispatch(theMetCleanAllObjects());
-store.dispatch(theMetSetSearchResult(apiSearch()));
-// store.dispatch(theMetSetDepartments(apiGetDepartments));
+store.dispatch(theMetSetSearchResult(apiSearch({ hasImage: true })));
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>

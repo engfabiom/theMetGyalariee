@@ -47,6 +47,12 @@ html {
 
 html,
 body,
+#root {
+  height: 100%;
+}
+
+html,
+body,
 #root,
 #app {
   margin: 0;

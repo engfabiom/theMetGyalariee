@@ -10,24 +10,23 @@ export default function SearchItems() {
   const dispatch = useDispatch();
 
   const { data: searchResult } = useSelector((reducer) => reducer.theMetReducer.searchResultReducer);
-  const { status, data: theMetObjects} = useSelector((reducer) => reducer.theMetReducer.objectsReducer);
-  console.log(status, theMetObjects);
+
+  const { status, data: theMetObjects } = useSelector((reducer) => reducer.theMetReducer.objectsReducer);
   let loadingTMO = status === "pending";
   let fulfilledTMO = status === "fulfilled";
 
   let halfSizeCounter = 0;
-  fulfilledTMO && theMetObjects.map((obj) => {
-    if (obj.orientation === "portrait")
-      halfSizeCounter = 3 - halfSizeCounter;
-    if (obj.orientation !== "portrait" && halfSizeCounter > 0) {
-      halfSizeCounter--;
-      obj.orientation = "half-landscape"; // square
-    } 
-  });
-
+  fulfilledTMO &&
+    theMetObjects.map((obj) => {
+      if (obj.orientation === "portrait") halfSizeCounter = 3 - halfSizeCounter;
+      if (obj.orientation !== "portrait" && halfSizeCounter > 0) {
+        halfSizeCounter--;
+        obj.orientation = "half-landscape"; // square
+      }
+    });
 
   const addObjects = (quantity) => {
-    let payload = getUniqueRandom(theMetObjects, searchResult, quantity)
+    let payload = getUniqueRandom(theMetObjects, searchResult, quantity);
     dispatch(theMetAddObjects(payload));
   };
 
@@ -42,9 +41,15 @@ export default function SearchItems() {
     <>
       <div className="search-items">
         {loadingTMO ? setLoadingCursor() : setDefaultCursor()}
-        {theMetObjects.map(obj => <CardObject key={obj.objectID} tmo={obj} />)}
+        {theMetObjects.map((obj) => (
+          <CardObject key={obj.objectID} tmo={obj} />
+        ))}
       </div>
-      <button className="btn__add-more-objects" disabled={loadingTMO} onClick={() => addObjects(10)} >
+      <button
+        className="btn__add-more-objects"
+        disabled={loadingTMO}
+        onClick={() => addObjects(10)}
+      >
         Add More Objects
       </button>
     </>

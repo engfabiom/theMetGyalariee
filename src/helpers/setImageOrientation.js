@@ -7,8 +7,6 @@ export const setImageOrientation = async (object) => {
   }
   catch (error) {
     console.error(`Error getting image size:`, error);
-    console.error(`setting [${object.primaryImageSmall}] to portrait orientation`);
-    object.orientation = "portrait";
     return null;
   }
   return object;
