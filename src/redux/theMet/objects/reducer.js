@@ -1,25 +1,35 @@
 import ObjectsTypes from "./action-types";
 
 const initialState = {
-  pending: false,
-  fulfilled: false,
-  rejected: false,
-  objects: [],
+  status: null,
+  error: null,
+  data: [],
 };
 
 const objectsReducer = (state = initialState, action) => {
-  let objectsPayload = action.payload;
   switch (action.type) {
+    case ObjectsTypes.CLEAN_OBJECTS + "_PENDING":
     case ObjectsTypes.ADD_OBJECTS + "_PENDING":
-      return {...state, pending: true};
-    case ObjectsTypes.ADD_OBJECTS + "_FULFILLED":
-      return {...state, pending: false, fulfilled: true, objects: [...state.objects,...objectsPayload]};
-    case ObjectsTypes.DROP_OBJECT:
-      return {...state, objects: [...state.objects].filter((o) => o.ObjectID !== this, objectsPayload)};
+    case ObjectsTypes.DROP_OBJECT + "_PENDING":
+      return { ...state, status: "pending" };
+
+    case ObjectsTypes.CLEAN_OBJECTS + "_REJECTED":
     case ObjectsTypes.ADD_OBJECTS + "_REJECTED":
-      return {...state, rejected: true};
-    case ObjectsTypes.CLEAN_OBJECTS:
-        return {...state, fulfilled: true, objects:[]};
+      return { ...state, status: "rejected", error: action.payload };
+
+    case ObjectsTypes.CLEAN_OBJECTS + "_FULFILLED":
+      return { ...state, status: "fulfilled", error: null, data: [] };
+
+    case DepartmentsTypes.ADD_OBJECTS + "_FULFILLED":
+      return {...state, status: "fulfilled", error: null, data: action.payload };
+
+    case ObjectsTypes.DROP_OBJECT + "_FULFILLED":
+      return {
+        ...state, 
+        status: "fulfilled", 
+        data: [...state.data].filter(
+          (o) => o.ObjectID !== action.payload),
+      };
 
     default:
       return state;

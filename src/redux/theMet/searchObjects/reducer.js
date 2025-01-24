@@ -1,26 +1,26 @@
 import SearchTypes from "./action-types";
 
 const initialState = {
-  pending: false,
-  fulfilled: false,
-  rejected: false,
-  searchResult: [],
+  status: null,
+  error: null,
+  data: [],
 };
 
 const searchReducer = (state = initialState, action) => {
   switch (action.type) {
-
     case SearchTypes.SET_SEARCH_RESULT + "_PENDING":
-      return { pending: true, fulfilled: false, rejected: false, searchResult: [] };
-
-    case SearchTypes.SET_SEARCH_RESULT + "_FULFILLED":
-      return { pending: false, fulfilled: true, rejected: false, searchResult: action.payload };
+    case SearchTypes.CLEAN_SEARCH + "_PENDING":
+      return { ...state, status:"pending" };
 
     case SearchTypes.SET_SEARCH_RESULT + "_REJECTED":
-      return { pending: false, fulfilled: false, rejected: action.payload, searchResult: [] };
+    case SearchTypes.CLEAN_SEARCH + "_REJECTED":
+      return { ...state, status: "rejected", error: action.payload };
 
-    case SearchTypes.CLEAN_SEARCH:
-      return { pending: false, fulfilled: false, rejected: false, searchResult: [] };
+    case SearchTypes.SET_SEARCH_RESULT + "_FULFILLED":
+      return { ...state, status: "fulfilled", error: null, data: action.payload };
+
+    case SearchTypes.CLEAN_SEARCH + "_FULFILLED":
+      return { ...state, status: "fulfilled", error: null, data: [] };
 
     default:
       return state;

@@ -1,28 +1,27 @@
 import DepartmentsTypes from "./action-types";
 
 const initialState = {
-  pending: false,
-  fulfilled: false,
-  rejected: false,
-  departments: [],
+  status: null,
   error: null,
+  data: [],
 };
 
 const departmentsReducer = (state = initialState, action) => {
-  let newState = {
-    pending: action.type.includes("_PENDING"),
-    fulfilled: action.type.includes("_FULFILLED"),
-    rejected: action.type.includes("_REJECTED"),
-  }
   switch (action.type) {
     case DepartmentsTypes.SET_DEPARTMENTS + "_PENDING":
-      return { ...newState, departments: [] };
-    case DepartmentsTypes.SET_DEPARTMENTS + "_FULFILLED":
-      return { ...newState, departments: action.payload };
+    case DepartmentsTypes.CLEAN_DEPARTMENTS + "_PENDING":
+      return { ...state, status: "pending" };
+
     case DepartmentsTypes.SET_DEPARTMENTS + "_REJECTED":
-      return { ...newState, error: action.payload };
-    case DepartmentsTypes.CLEAN_DEPARTMENTS:
-      return { ...newState };
+      case DepartmentsTypes.CLEAN_DEPARTMENTS + "_REJECTED":
+      return { ...state, status: "rejected", error: action.payload };
+
+    case DepartmentsTypes.SET_DEPARTMENTS + "_FULFILLED":
+      return {...state, status: "fulfilled", error: null, data: action.payload };
+
+    case DepartmentsTypes.CLEAN_DEPARTMENTS + "_FULFILLED":
+      return {...state, status: "fulfilled", error: null, data: [] };
+
     default:
       return state;
   }
