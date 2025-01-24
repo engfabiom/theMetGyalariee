@@ -9,11 +9,12 @@ import CardObject from "./CardObject";
 export default function SearchItems() {
   const dispatch = useDispatch();
 
-  const { data: searchResult } = useSelector((reducer) => reducer.theMetReducer.searchResultReducer);
+  const { status: searchStatus, data: searchResult } = useSelector((reducer) => reducer.theMetReducer.searchResultReducer);
+  let loading = searchStatus === "pending";
 
-  const { status, data: theMetObjects } = useSelector((reducer) => reducer.theMetReducer.objectsReducer);
-  let loadingTMO = status === "pending";
-  let fulfilledTMO = status === "fulfilled";
+  const { status:theMetObjectsStatus, data: theMetObjects } = useSelector((reducer) => reducer.theMetReducer.objectsReducer);
+  loading |= theMetObjectsStatus === "pending";
+  let fulfilledTMO = theMetObjectsStatus === "fulfilled";
 
   let halfSizeCounter = 0;
   fulfilledTMO &&
@@ -40,14 +41,14 @@ export default function SearchItems() {
   return (
     <>
       <div className="search-items">
-        {loadingTMO ? setLoadingCursor() : setDefaultCursor()}
+        {loading ? setLoadingCursor() : setDefaultCursor()}
         {theMetObjects.map((obj) => (
           <CardObject key={obj.objectID} tmo={obj} />
         ))}
       </div>
       <button
         className="btn__add-more-objects"
-        disabled={loadingTMO}
+        disabled={loading}
         onClick={() => addObjects(10)}
       >
         Add More Objects

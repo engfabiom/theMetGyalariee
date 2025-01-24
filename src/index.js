@@ -12,7 +12,7 @@ import { theMetSetSearchResult } from "./redux/rootActions";
 
 console.clear();
 
-store.dispatch(theMetSetSearchResult(apiSearch({ hasImage: true })));
+store.dispatch(theMetSetSearchResult(apiSearch({isHighlight:true, hasImages:true, isOnView: true, q:"hippo"})));
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
