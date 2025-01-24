@@ -39,7 +39,7 @@ function IconFilters () {
         </svg>
 }
 
-function IconFilterArrow (isMenuOpen) { 
+function IconFilterArrow ({isMenuOpen}) { 
     <svg 
     className="search-bar__filters-arrow" 
     width="13" 
