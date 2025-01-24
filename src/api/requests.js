@@ -29,8 +29,8 @@ export const apiSearch = async (paramsObject) => {
   delete searchTerms.q;
   searchTerms = { hasImages: true, ...searchTerms, q: paramsObject?.q || "*" };
   
-  searchTerms = Object.entries(searchTerms).map(p=>("&"+p[0]+"="+p[1])).join("");
-  searchTerms = searchTerms.replace(searchTerms.charAt(0),"?");
+    searchTerms = Object.entries(searchTerms).map(p=>("&"+p[0]+"="+p[1])).join("");
+    searchTerms = searchTerms.replace(searchTerms.charAt(0),"?");
 
   console.log(searchTerms);
 
@@ -57,6 +57,7 @@ export const apiGetObject = async (id) => {
   }
 };
 
+/* ORDS says : I dont understand why was it necessary to filter numbers ? */
 export const apiGetObjects = async (objectIDsArray) => {
   try {
     let objects = await Promise.all(objectIDsArray.map(apiGetObject));

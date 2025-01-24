@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { IconCatArrow, Iconfilters, IconMagnifyingGlass } from "./IconsSVG";
+
 import { getArrayObj } from '../helpers/getArrayObj';
 import "../css/searchBar.css";
 
@@ -32,69 +34,23 @@ function SearchBar({ setTheMetObject }) {
   return (
     <div className='search-bar__container'>
       <div className='search-bar__input-box'>
-        <input
-          name='q'
-          value={params.q}
-          type='text'
-          placeholder='type a keyword'
-          className='search-bar__input-text'
-          onChange={handleChange}
-        />
-        <button className='search-bar__input-button' onClick={newQ}>
-          <svg
-            width='43'
-            height='43'
-            viewBox='0 0 43 43'
-            xmlns='http://www.w3.org/2000/svg'
-          >
-            <g filter='url(#filter0_d_223_1106)'>
-              <path
-                d='M25.8069 24.0864H24.9008L24.5796 23.7767C25.7037 22.4692 26.3804 20.7717 26.3804 18.925C26.3804 14.8074 23.0427 11.4697 18.925 11.4697C14.8074 11.4697 11.4697 14.8074 11.4697 18.925C11.4697 23.0427 14.8074 26.3804 18.925 26.3804C20.7717 26.3804 22.4692 25.7037 23.7767 24.5796L24.0864 24.9008V25.8069L29.8213 31.5303L31.5303 29.8213L25.8069 24.0864ZM18.925 24.0864C16.0691 24.0864 13.7637 21.781 13.7637 18.925C13.7637 16.0691 16.0691 13.7637 18.925 13.7637C21.781 13.7637 24.0864 16.0691 24.0864 18.925C24.0864 21.781 21.781 24.0864 18.925 24.0864Z'
-              />
-            </g>
-            <defs>
-              <filter
-                id='filter0_d_223_1106'
-                x='6.88184'
-                y='11.4697'
-                width='29.2363'
-                height='29.2363'
-                filterUnits='userSpaceOnUse'
-                colorInterpolationFilters='sRGB'
-              >
-                <feFlood floodOpacity='0' result='BackgroundImageFix' />
-                <feColorMatrix
-                  in='SourceAlpha'
-                  type='matrix'
-                  values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0'
-                  result='hardAlpha'
-                />
-                <feOffset dy='4.58789' />
-                <feGaussianBlur stdDeviation='2.29395' />
-                <feComposite in2='hardAlpha' operator='out' />
-                <feColorMatrix
-                  type='matrix'
-                  values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0'
-                />
-                <feBlend
-                  mode='normal'
-                  in2='BackgroundImageFix'
-                  result='effect1_dropShadow_223_1106'
-                />
-                <feBlend
-                  mode='normal'
-                  in='SourceGraphic'
-                  in2='effect1_dropShadow_223_1106'
-                  result='shape'
-                />
-              </filter>
-            </defs>
-          </svg>
-        </button>
+        <form onSubmit={newQ}> 
+          <input
+            name='q'
+            value={params.q}
+            type='text'
+            placeholder='type a keyword'
+            className='search-bar__input-text'
+            onChange={handleChange}
+          />
+          <button className='search-bar__input-button'>
+           <IconMagnifyingGlass/> 
+          </button>
+        </form>
       </div>
 
-      <div className='search-bar__categories-box' onClick={toggleMenu}>
-        <div className='search-bar__categories-icon'>
+      <div className='search-bar__filters-box' onClick={toggleMenu}>
+        <div className='search-bar__filters-icon'>
           <svg
             width='33'
             height='33'
@@ -127,10 +83,10 @@ function SearchBar({ setTheMetObject }) {
             </defs>
           </svg>
         </div>
-        <span className='search-bar__categories-text'>Categories</span>
+        <span className='search-bar__filters-text'>filters</span>
 
         <svg
-          className='search-bar__categories-arrowdown-svg'
+          className='search-bar__filters-arrowdown-svg'
           width='13'
           height='13'
           viewBox='0 0 13 13'

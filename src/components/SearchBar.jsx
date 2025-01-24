@@ -8,9 +8,9 @@ function SearchBar({ setTheMetObject, onSearch }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const toggleMenu = () => setIsMenuOpen((prev) => !prev);
 
-  /* USE THE SEARCHBAR AND CATEGORIES TO SEND QUERIES  */
+  /* USE THE SEARCHBAR AND filters TO SEND QUERIES  */
 
-  /* CATEGORIES > Track if criterias are checked  */
+  /* filters > Track if criterias are checked  */
   /* remark could be done without a hook, directly inside the function handleUserQ with the DOM
     But if we wanted to implement all sorts of other Criteria, then it could be reusable    */
   const [areChecked, setAreChecked] = useState({
@@ -104,9 +104,9 @@ function SearchBar({ setTheMetObject, onSearch }) {
         </button>
       </div>
 
-      {/* CATEGORIES */}
-      <div className="search-bar__categories-box" onClick={toggleMenu}>
-        <div className="search-bar__categories-icon">
+      {/* filters */}
+      <div className="search-bar__filters-box" onClick={toggleMenu}>
+        <div className="search-bar__filters-icon">
           <svg
             width="33"
             height="33"
@@ -130,9 +130,9 @@ function SearchBar({ setTheMetObject, onSearch }) {
             </defs>
           </svg>
         </div>
-        <span className="search-bar__categories-text">Categories</span>
+        <span className="search-bar__filters-text">filters</span>
         <svg
-          className="search-bar__categories-arrow"
+          className="search-bar__filters-arrow"
           width="13"
           height="13"
           viewBox="0 0 13 13"

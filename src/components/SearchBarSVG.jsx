@@ -24,7 +24,7 @@ function IconMagnifyingGlass () {
 }
 
 
-function IconCategories () { 
+function IconFilters () { 
     <svg width="33" height="33" viewBox="0 0 33 33" xmlns="http://www.w3.org/2000/svg">
             <g clipPath="url(#clip0_217_909)">
                 <path d="M11.567 6.37622L5.85693 15.72H17.2771L11.567 6.37622Z" />
@@ -39,9 +39,9 @@ function IconCategories () {
         </svg>
 }
 
-function IconCatArrow (isMenuOpen) { 
+function IconFilterArrow (isMenuOpen) { 
     <svg 
-    className="search-bar__categories-arrow" 
+    className="search-bar__filters-arrow" 
     width="13" 
     height="13" 
     viewBox="0 0 13 13" 
@@ -58,8 +58,5 @@ function IconCatArrow (isMenuOpen) {
     </svg>
 }
 
-export {IconMagnifyingGlass, IconCategories, IconCatArrow }
+export {IconMagnifyingGlass, IconFilters, IconFilterArrow }
 
-/* add in SearchBar : 
-import { IconCatArrow, IconCategories, IconMagnifyingGlass } from "./IconsSVG";
-*/
