@@ -10,9 +10,9 @@ import store from "./redux/store.js";
 import { apiSearch } from "./api/requests";
 import { theMetSetSearchResult } from "./redux/rootActions";
 
-console.clear();
+// console.clear();
 
-store.dispatch(theMetSetSearchResult(apiSearch({isHighlight:true, hasImages:true, isOnView: true, q:"hippo"})));
+store.dispatch(theMetSetSearchResult(apiSearch({isHighlight:true, hasImages:true, isOnView: true, q:"hippos"})));
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>

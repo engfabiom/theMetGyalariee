@@ -44,7 +44,6 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  fill: var(--color-grayscale1); 
 }
 .search-bar__input-button:hover {
   background-color: var(--color-rosybrown2);
@@ -76,18 +75,12 @@
   font-family: var(--font-serif-roboto);
 }
 
-.search-bar__filters-arrow {
-  cursor: pointer;
-  fill : var(--color-grayscale5) ; 
-}
 
 .search-bar__filters-box:hover {
   .search-bar__filters-icon {
     background-color: var(--color-rosybrown2); }
   .search-bar__filters-text { 
     color : var(--color-rosybrown2) }
-  .search-bar__filters-arrow {
-      fill : var(--color-rosybrown2) }
 }
 
 

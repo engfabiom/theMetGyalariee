@@ -24,6 +24,7 @@ export const apiGetDepartments = async () => {
   } 
 }
 
+
 export const apiSearch = async (paramsObject) => {
   let searchTerms = { ...paramsObject, q: "*" };
   delete searchTerms.q;
@@ -32,7 +33,7 @@ export const apiSearch = async (paramsObject) => {
     searchTerms = Object.entries(searchTerms).map(p=>("&"+p[0]+"="+p[1])).join("");
     searchTerms = searchTerms.replace(searchTerms.charAt(0),"?");
 
-  console.log(searchTerms);
+  // console.log(searchTerms);
 
   try {
     const axiosquery = `https://collectionapi.metmuseum.org/public/collection/v1/search${searchTerms}`;
@@ -56,6 +57,7 @@ export const apiGetObject = async (id) => {
     return e;
   }
 };
+
 
 /* ORDS says : I dont understand why was it necessary to filter numbers ? */
 export const apiGetObjects = async (objectIDsArray) => {

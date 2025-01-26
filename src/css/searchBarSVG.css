@@ -1,0 +1,11 @@
+.search-bar-svg__magnifying-glass {
+    fill: var(--color-grayscale1); }
+
+.search-bar-svg__filters {
+    cursor: pointer;
+    fill : var(--color-grayscale5) ; 
+  }
+
+.search-bar-svg__arrow {
+    fill : var(--color-rosybrown2) }
+

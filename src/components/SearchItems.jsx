@@ -6,7 +6,6 @@ import getUniqueRandom from "../helpers/getUniqueRandom";
 import { theMetAddObjects } from "../redux/theMet/actions";
 
 import CardObject from "./CardObject";
-/* ORDS rq > find the title of the section searchItems confusing, would like better displayeditems */
 export default function SearchItems() {
   const dispatch = useDispatch();
 
@@ -15,6 +14,7 @@ export default function SearchItems() {
 
   const { status:theMetObjectsStatus, data: theMetObjects } = useSelector((reducer) => reducer.theMetReducer.objectsReducer);
   loading |= theMetObjectsStatus === "pending";
+{/*ORDS > or more explicit : loading = loading || (theMetObjectsStatus === "pending"); */}
   let fulfilledTMO = theMetObjectsStatus === "fulfilled";
 
   let halfSizeCounter = 0;
@@ -23,12 +23,10 @@ export default function SearchItems() {
       if (obj.orientation === "portrait") halfSizeCounter = 3 - halfSizeCounter;
       if (obj.orientation !== "portrait" && halfSizeCounter > 0) {
         halfSizeCounter--;
-        obj.orientation = "half-landscape"; // ORDS square
+        obj.orientation = "square";
       }
     });
     
- {/* ORDS rq  > only working for initial random search ?  */}
-
   const addObjects = (quantity) => {
     let payload = getUniqueRandom(theMetObjects, searchResult, quantity);
     dispatch(theMetAddObjects(payload));
