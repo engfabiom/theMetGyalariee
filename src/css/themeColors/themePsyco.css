@@ -1,3 +1,62 @@
+/* Maybe a solution to add more variations to that theme 
+
+html[data-theme="psychedelic"] button {
+  background-color: #ff00ff;
+  color: #00ff00; 
+}
+
+*/
+
+
+[data-theme="psycho"] {
+  /* text colors */
+  --color-text1 : cyan;
+  --color-text2 : lime;
+  --color-text3 : var(--color-gray5); 
+  --color-text4 : var(--color-gray8); 
+  
+  --color-text--hover1: var(--color-rosybrown2); 
+  --color-text--hover2: var(--color-rosybrown3); 
+  
+  
+  --color-title1 : crimson ; 
+  --color-title1--shadow : darkorchid ; 
+  
+  --color-title2: ; 
+  --color-title3 : ; 
+  
+  /* background colors */ 
+  --color-bg1 : 	lemonchiffon; 
+  --color-bg2 :   lightsteelblue; 
+  --color-bg3 : var(--color-gray8); 
+  --color-bg4 : ; 
+  
+  /*box shadow */
+  --color-shadow-light : 	mediumseagreen; 
+  --color-shadow-strong : mediumturquoise; 
+  
+  /* button colors and sort-of-buttons */ 
+  --color-btn1 : var(purple);
+  --color-btn1--hover : var(--color-rosybrown2) ;  
+  --color-btn2 : var(orange);
+  --color-btn2--hover : var(--color-rosybrown2) ;
+  
+  --color-togle1 : var(--color-rosybrown3) ; 
+  --color-togle2 : var(--color-white);
+  --color-togle-border : var(--color-gray2); 
+  
+  --color-checkbox : var(--color-gray1); 
+  
+  /*border colors */ 
+  --color-border1 : var(--color-gray2) ; 
+  --color-border2 : var(--color-gray4) ; 
+  --color-border3 : var(--color-gray7) ; 
+}
+
+
+
+/*PREVIOUS VERSION 
+
 [data-theme="psyco"] {
   --color-grayscale1: hsl(51, 33%, 90%);
   --color-grayscale2: hsl(103, 33%, 75%);
@@ -9,15 +68,4 @@
   --color-rosybrown1: hsl(17, 38%, 70%);
   --color-rosybrown2: hsl(359, 38%, 67%);
   --color-rosybrown3: hsl(360, 38%, 50%);
-}
-
-
-
-/* A ESSAYER 
-
-html[data-theme="psychedelic"] button {
-  background-color: #ff00ff;
-  color: #00ff00; 
-}
-
-*/
+}*/

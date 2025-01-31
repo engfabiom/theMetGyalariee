@@ -47,6 +47,7 @@ function SearchBar() {
     <div className='search-bar__container'>
       <form onSubmit={newQ} className='search-bar__input-box'> 
         <input
+          autocomplete="off"
           name='q'
           value={params.q}
           type='text'

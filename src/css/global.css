@@ -17,8 +17,8 @@
   --color-gray3: hsl(0, 0%, 60%);
   --color-gray4: hsl(0, 0%, 45%);
   --color-gray5: hsl(0, 0%, 30%);
-  --color-gray6: hsl(0, 0%, 15%);
-  --color-gray7: hsl(0, 0%, 10%);
+  --color-gray6: hsl(0, 0%, 23%);
+  --color-gray7: hsl(0, 0%, 15%);
   --color-gray8: hsl(0, 0%, 5%);
 
 /* dark and white */
@@ -78,9 +78,11 @@ body,
   flex: 1;
   flex-direction: column;
   position: relative;
+  padding: 2rem 0; 
   font-weight: 400;
   font-family: var(--font-sans-serif-montserrat);
   font-size: 1.6rem;
   color: var(--color-text1);
   background-color: var(--color-bg1) ;
 }
+

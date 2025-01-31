@@ -1,4 +1,5 @@
 .search-bar__container {
+  z-index : 9; 
   position : relative ; 
   background-color: var(--color-bg1);
   min-width: 60rem;
@@ -19,17 +20,24 @@
 .search-bar__input-box {
   display: flex;
   align-items: center;
-  padding: 2rem;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  padding: 0;
   border-bottom: 3px solid var(--color-border1 );
+  &:hover, &:hover .search-bar__input-text  {
+    background-color: var(--color-bg2);
+  }
 }
 
 .search-bar__input-text {
   flex: 1;
   border: none;
+  border-radius: 1rem;
   outline: none;
   font-size: 18px;
-  padding: 1rem 0;
+  padding:2rem;
   color: var(--color-text1);
+  background-color: var(--color-bg1);
 }
 
 .search-bar__input::placeholder {
@@ -81,7 +89,7 @@
   .search-bar-svg__filters{
     background-color: var(--color-btn2--hover); }
   .search-bar__filters-text { 
-    color : var(--color-text--hover) }
+    color : var(--color-text--hover1) }
 }
 
 
@@ -99,7 +107,7 @@
   border-radius: 1rem;
   padding: 2rem;
   gap: 2rem;
-  box-shadow: 0 4px 8px var(--color-border3) ; /* add anhigilith class*/
+  box-shadow: 0 4px 8px var(--color-bg2) ; 
   z-index: 10;
   display: flex;
   flex-direction: column;
@@ -123,6 +131,6 @@
 }
 
 .dropdown-menu__item:hover {
-  color: var(--color-text--hover); 
+  color: var(--color-text--hover1); 
   font-weight: bold;
 }

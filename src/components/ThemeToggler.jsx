@@ -1,7 +1,7 @@
 import "../css/themeToggler.css";
 import "../css/themeColors/themeDark.css";
 import "../css/themeColors/themeDefault.css";
-/* import "../css/themeColors/themePsyco.css"; */
+import "../css/themeColors/themePsyco.css"; 
 
 
 const ThemeToggler = ({ setIsDarkTheme, isDarkTheme }) => {
