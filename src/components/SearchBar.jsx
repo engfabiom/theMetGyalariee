@@ -15,6 +15,8 @@ function SearchBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const toggleMenu = () => setIsMenuOpen((prev) => !prev);
 
+  const [filtersIsHovered, setFiltersIsHovered] = useState(false);
+
   const [params, setParams] = useState({
     q: '',
     isHighlight: false,
@@ -57,10 +59,15 @@ function SearchBar() {
         </button>
       </form>
 
-      <div className='search-bar__filters-box' onClick={toggleMenu}>
-        <IconFilters/>
-        <span className='search-bar__filters-text'>filters</span>
-        <IconArrow isMenuOpen={isMenuOpen}/> 
+      <div 
+        className='search-bar__filters-box'
+        onClick={toggleMenu}
+        onMouseEnter={() => setFiltersIsHovered(true)}
+        onMouseLeave={() => setFiltersIsHovered(false)} 
+      >
+          <IconFilters/>
+          <span className='search-bar__filters-text'>filters</span>
+          <IconArrow isMenuOpen={isMenuOpen} filtersIsHovered={filtersIsHovered}/> 
       </div>
 
       {isMenuOpen && (

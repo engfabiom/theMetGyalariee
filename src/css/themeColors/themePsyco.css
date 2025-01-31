@@ -10,3 +10,14 @@
   --color-rosybrown2: hsl(359, 38%, 67%);
   --color-rosybrown3: hsl(360, 38%, 50%);
 }
+
+
+
+/* A ESSAYER 
+
+html[data-theme="psychedelic"] button {
+  background-color: #ff00ff;
+  color: #00ff00; 
+}
+
+*/

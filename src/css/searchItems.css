@@ -12,20 +12,23 @@
   padding: 0.5rem 1rem;
   border: none;
   border-radius: 0.3rem;
-  color: var(--primary-text-color);
+  color: var(--color-text1);
+  background-color: var(--color-btn2 );
   font-size: 1.6rem;
   margin: 0 auto 2rem;
-  width: 80%;
-  box-shadow: 0px 2px 5px 0px var(--color-grayscale1);
-  transition: scale 0.3s ease-in-out;
+  padding: 3rem;
+  width: 25rem;
+  scale: 0.99;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 0px 1rem 0px var(--color-shadow-light );
+  &:hover {
+    background-color: var(--color-btn2--hover);
+    box-shadow: 0px 0px 2rem 0px var(--color-shadow-light );
+    scale: 1;
+  }
+  /* ORDS remark : why not disabled */
   &:not([disabled]) {
     cursor: pointer;
-    &:hover {
-      background-color: var(--color-hover);
-      color: var(--secondary-text-color);
-      box-shadow: 0px 2px 5px 0px var(--color-grayscale4);
-      scale: 1.02;
-    }
   }
   &:disabled, 
   &[disabled] {

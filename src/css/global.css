@@ -1,35 +1,46 @@
+
 /* ========== DEFINE GLOBAL VARIABLES ============== */
 :root {
-  /* FONTS*/
+  /* === FONTS ===*/
   --font-serif-roboto: "Roboto Mono", monospace;
   --font-sans-serif-montserrat: "Montserrat Alternates", sans-serif;
 
-  /* FIXED COLORS */
+/*  backdrop-filter: blur(10px); Applique un flou derrière */
+/*mix-blend-mode: overlay; accentuer le contraste entre arriere plan et le devant */
+
+  /* === FIXED COLORS === */
+    /* Naming new colors => base name on a color-scale : 
+    example :   color-greenscale1 (the lighter) to 5 (the darker)*/
+
   --color-gray1: hsl(0, 0%, 90%);
   --color-gray2: hsl(0, 0%, 75%);
   --color-gray3: hsl(0, 0%, 60%);
   --color-gray4: hsl(0, 0%, 45%);
   --color-gray5: hsl(0, 0%, 30%);
   --color-gray6: hsl(0, 0%, 15%);
+  --color-gray7: hsl(0, 0%, 10%);
+  --color-gray8: hsl(0, 0%, 5%);
 
-  /* THEME COLORS - DEFAULT: [data-theme="light"] */
-  /* Naming new colors => base name on a color-scale or on the color's purpose : 
-    example : 
-      color-greenscale1 to 5
-      color-url 
-  */
-  /* color-scheme: light; */
-  --color-grayscale1: hsl(0, 0%, 100%);
-  --color-grayscale2: hsl(60, 15%, 90%);
-  --color-grayscale3: hsl(198, 10%, 45%);
-  --color-grayscale4: hsl(0, 0%, 15%);
-  --color-grayscale5: hsl(0, 0%, 0%);
-  --color-grayscale6: hsl(0, 0%, 0%);
+/* dark and white */
+  --color-dark: #000000;
+  --color-white: #ffffff;
 
-  --color-rosybrown1: hsl(17, 38%, 70%);
-  --color-rosybrown2: hsl(359, 38%, 67%);
-  --color-rosybrown3: hsl(360, 38%, 50%);
+/* rosybrown */ 
+  --color-rosybrown1 : #e1b0ac;
+  --color-rosybrown2 : #cf8985;
+  --color-rosybrown3 : #b04f4f;
+  --color-rosybrown4 : #76373D;
+
+/* another color scale for example green */ 
+--color-green1: #94b4a5;
+--color-green2: #7aa190;
+--color-green3: #618f7b;
+--color-green4: #467e67;
+--color-green5: #2a6c54;
+--color-green6: #005b41;
 }
+
+
 
 /* ========= DEFINE GLOBAL STYLING ========= */
 *,
@@ -70,6 +81,6 @@ body,
   font-weight: 400;
   font-family: var(--font-sans-serif-montserrat);
   font-size: 1.6rem;
-  color: var(--color-grayscale5);
-  background-color: var(--color-grayscale1);
+  color: var(--color-text1);
+  background-color: var(--color-bg1) ;
 }

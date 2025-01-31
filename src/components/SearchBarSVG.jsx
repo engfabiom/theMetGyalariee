@@ -42,7 +42,7 @@ function IconFilters () {
     )
 }
 
-function IconArrow ({isMenuOpen}) { 
+function IconArrow ({isMenuOpen , filtersIsHovered}) { 
     return (
         <svg 
         className="search-bar-svg__arrow"
@@ -52,7 +52,9 @@ function IconArrow ({isMenuOpen}) {
         xmlns="http://www.w3.org/2000/svg"
         >
             <g clipPath="url(#clip0_46_796)">
-                <path d={isMenuOpen ? "M4.01375 8.34717L6.50002 5.86632L8.98628 8.34717L9.75003 7.58341L6.50002 4.3334L3.25 7.58341L4.01375 8.34717Z" : "M4.01375 4.65283L6.50002 7.13368L8.98628 4.65283L9.75003 5.41659L6.50002 8.6666L3.25 5.41659L4.01375 4.65283Z"} />
+                <path 
+                    style={{ fill: filtersIsHovered ? "var(--color-text--hover)" : "var(--color-text1)" }}
+                    d={isMenuOpen ? "M4.01375 8.34717L6.50002 5.86632L8.98628 8.34717L9.75003 7.58341L6.50002 4.3334L3.25 7.58341L4.01375 8.34717Z" : "M4.01375 4.65283L6.50002 7.13368L8.98628 4.65283L9.75003 5.41659L6.50002 8.6666L3.25 5.41659L4.01375 4.65283Z"} />
             </g>
             <defs>
                 <clipPath id="clip0_46_796">
