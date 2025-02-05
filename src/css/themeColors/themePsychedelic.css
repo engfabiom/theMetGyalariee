@@ -1,4 +1,6 @@
-[data-theme="psyco"] {
+[data-theme="psychedelic"] {
+  --color-text1 : orange;
+
   --color-grayscale1: hsl(51, 33%, 90%);
   --color-grayscale2: hsl(103, 33%, 75%);
   --color-grayscale3: hsl(154, 33%, 60%);

@@ -1,4 +1,7 @@
 [data-theme="dark"] {
+  --color-text1: hsl(60,10%,60%);
+  --color-bg1: hsl(0,3%,5%);
+
   --color-grayscale1: hsl(0, 0%, 0%);
   --color-grayscale2: hsl(0, 0%, 15%);
   --color-grayscale3: hsl(198, 10%, 45%);
