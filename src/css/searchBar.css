@@ -1,7 +1,7 @@
 .search-bar__container {
   z-index : 9; 
   position : relative ; 
-  background-color: var(--color-bg1);
+  background-color: var(--color-bg-primary);
   min-width: 60rem;
   min-height: 20rem;
   padding: 1rem 5rem;
@@ -23,9 +23,9 @@
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
   padding: 0;
-  border-bottom: 3px solid var(--color-border1 );
+  border-bottom: 3px solid var(--color-border-primary );
   &:hover, &:hover .search-bar__input-text  {
-    background-color: var(--color-bg2);
+    background-color: var(--color-bg--hover);
   }
 }
 
@@ -36,17 +36,17 @@
   outline: none;
   font-size: 18px;
   padding:2rem;
-  color: var(--color-text1);
-  background-color: var(--color-bg1);
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-primary);
 }
 
 .search-bar__input::placeholder {
-  color: var(--color-text3);
+  color: var(--color-text-discreet);
   font-family: var(--font-serif-roboto);
 }
 
 .search-bar__input-button {
-  background-color: var(--color-btn1);
+  background-color: var(--color-btn-discreet);
   border: none;
   border-radius: 50%;
   width: 40px;
@@ -57,7 +57,7 @@
   cursor: pointer;
 }
 .search-bar__input-button:hover {
-  background-color: var(--color-btn1--hover );
+  background-color: var(--color-btn-discreet--hover );
 }
 
 .search-bar__filters-box {
@@ -67,7 +67,7 @@
 }
 
 .search-bar-svg__filters {
-  background-color: var(--color-btn2);
+  background-color: var(--color-btn-primary);
   border-radius: 50%; 
   width: 30px;
   height: 30px;
@@ -79,7 +79,7 @@
 
 .search-bar__filters-text {
   font-size: 16px;
-  color: var(--color-text1);
+  color: var(--color-text-primary);
   padding: 1rem;
   font-size: 1.5rem;
   font-family: var(--font-serif-roboto);
@@ -87,9 +87,9 @@
 
 .search-bar__filters-box:hover {
   .search-bar-svg__filters{
-    background-color: var(--color-btn2--hover); }
+    background-color: var(--color-btn-primary--hover); }
   .search-bar__filters-text { 
-    color : var(--color-text--hover1) }
+    color : var(--color-text--hover-primary) }
 }
 
 
@@ -102,12 +102,11 @@
   top: 15rem ; 
   left: 20rem; 
   max-height: 20rem;
-  background-color: var(--color-bg2);
-  border: 0.5px solid var(--color-border2);
+  background-color: var(--color-bg--hover);
   border-radius: 1rem;
   padding: 2rem;
   gap: 2rem;
-  box-shadow: 0 4px 8px var(--color-bg2) ; 
+  box-shadow: 0 0 1px var(--color-border-primary) ; 
   z-index: 10;
   display: flex;
   flex-direction: column;
@@ -131,6 +130,6 @@
 }
 
 .dropdown-menu__item:hover {
-  color: var(--color-text--hover1); 
+  color: var(--color-text--hover-primary); 
   font-weight: bold;
 }

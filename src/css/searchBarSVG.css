@@ -1,13 +1,14 @@
 .search-bar-svg__magnifying-glass {
-    fill: var(--color-text4); }
+    fill: var(--color-bg-primary)
+  }
 
 .search-bar-svg__filters {
     cursor: pointer;
-    fill : var(--color-text1) ; 
+    fill : var(--color-text-primary) ; 
   }
 
 .search-bar-svg__arrow {
-    fill : var(--color-text1) 
+    fill : var(--color-text-primary) 
   }
 /* for arrow:hover see dynamically in the searchBarSVG.jsx */ 
 

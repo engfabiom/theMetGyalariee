@@ -2,7 +2,7 @@
 .card {
   height: 15rem;
   display: flex;
-  background-color: var(--color-bg1);
+  background-color: var(--color-bg-primary);
   gap: 2rem;
   justify-content: start;
   align-items: center;
@@ -17,10 +17,10 @@
     scale: 1;
   }
   &:hover .card-info { 
-    color: var(--color-text--hover1) ;
+    color: var(--color-text--hover-primary) ;
   }
   &:hover .card-info__title { 
-    color: var(--color-text--hover2) ;
+    color: var(--color-text--hover-strong) ;
   }
 
   }

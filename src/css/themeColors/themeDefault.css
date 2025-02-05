@@ -15,45 +15,40 @@
 /* === DEFAUT THEME = LIGHT  === */ 
 
 :root {
-/* text colors */
---color-text1 : var(--color-gray8);
---color-text2 : var(--color-gray5);
---color-text3 : var(--color-gray3); 
---color-text4 : var(--color-gray1); 
 
---color-text--hover1: var(--color-rosybrown2); 
---color-text--hover2: var(--color-rosybrown3); 
+/* website title colors */
+--color-main-title : var(--color-rosybrown2 ) ; 
+--color-main-title--shadow : var(--color-rosybrown1 ) ; 
 
---color-title1 : var(--color-rosybrown2 ) ; 
---color-title1--shadow : var(--color-rosybrown1 ) ; 
+  /* text colors */
+--color-text-primary : var(--color-gray8);
+--color-text-discreet : var(--color-gray3); 
 
---color-title2: ; 
---color-title3 : ; 
+--color-text--hover-primary: var(--color-rosybrown2); 
+--color-text--hover-strong: var(--color-rosybrown3); 
 
 /* background colors */ 
---color-bg1 : var(--color-white) ; 
---color-bg2 : var(--color-gray1); 
---color-bg3 : var(--color-gray2); 
---color-bg4 : ; 
+--color-bg-primary : var(--color-white) ; 
+--color-bg--hover : var(--color-gray1); 
 
 /*box shadow */
 --color-shadow-light : var(--color-gray1); 
 --color-shadow-strong : var(--color-gray3); 
 
 /* button colors and sort-of-buttons */ 
---color-btn1 : var(--color-gray7);
---color-btn1--hover : var(--color-rosybrown2) ;  
---color-btn2 : var(--color-gray3);
---color-btn2--hover : var(--color-rosybrown2) ;
 
---color-togle1 : var(--color-rosybrown3) ; 
---color-togle2 : var(--color-white);
+--color-btn-primary : var(--color-gray3);
+--color-btn-primary--hover : var(--color-rosybrown2) ;
+
+--color-btn-discreet : var(--color-gray7);
+--color-btn-discreet--hover : var(--color-rosybrown2) ;  
+
+--color-togle-primary : var(--color-white);
+--color-togle-secondary : var(--color-rosybrown3) ; 
 --color-togle-border : var(--color-gray2); 
 
 --color-checkbox : var(--color-gray4); 
 
 /*border colors */ 
---color-border1 : var(--color-gray7) ; 
---color-border2 : var(--color-gray5) ; 
---color-border3 : var(--color-gray2) ; 
+--color-border-primary : var(--color-gray7) ; 
 }
