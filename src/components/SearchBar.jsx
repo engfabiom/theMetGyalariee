@@ -32,22 +32,23 @@ function SearchBar() {
     }));
    }
 
-  async function newQ(event) { 
-    event.preventDefault(); // prevent native behaviour from form 
-    const searchResult = await apiSearch(params);
-    if (!searchResult) {
-      throw new Error("Search result is empty or invalid");
-    }
-    dispatch(theMetSetSearchResult(searchResult));
+function newQ(event) { 
+    event.preventDefault(); 
+    dispatch(theMetSetSearchResult(apiSearch(params)));
     setIsMenuOpen(false);
+    setParams({
+      q: '',
+      isHighlight: false,
+      isOnView: false,
+    }); 
   }
 
-
+// submit tag 
   return (
     <div className='search-bar__container'>
       <form onSubmit={newQ} className='search-bar__input-box'> 
         <input
-          autocomplete="off"
+          autoComplete="off"
           name='q'
           value={params.q}
           type='text'
@@ -55,7 +56,7 @@ function SearchBar() {
           className='search-bar__input-text'
           onChange={handleChange}
         />
-        <button className='search-bar__input-button'>
+        <button type="sumit" className='search-bar__input-button'>
           <IconMagnifyingGlass/> 
         </button>
       </form>
