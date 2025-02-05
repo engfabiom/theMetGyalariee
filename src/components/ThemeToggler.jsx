@@ -14,7 +14,7 @@ const ThemeToggler = ({ setIsDarkTheme, isDarkTheme }) => {
             onChange={() => setIsDarkTheme((prev) => !prev)}
             checked={isDarkTheme}
           />
-          {isDarkTheme ? "Psycho" : "Light"}
+          {isDarkTheme ? "Dark" : "Light"}
           <span></span>
         </label>
       </div>
