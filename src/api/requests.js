@@ -1,6 +1,6 @@
-import axios from 'axios';
-import {URLSearchParams} from "url";
-import { setImageOrientation } from '../helpers/setImageOrientation';
+import axios from "axios";
+import { URLSearchParams } from "url";
+import { setImageOrientation } from "../helpers/setImageOrientation";
 
 export const apiGetAllObjects = async () => {
   try {
@@ -11,7 +11,7 @@ export const apiGetAllObjects = async () => {
     console.error(`ERROR - Objects Request: ...`, e.message, e.code);
     return e;
   }
-}
+};
 
 export const apiGetDepartments = async () => {
   try {
@@ -19,30 +19,30 @@ export const apiGetDepartments = async () => {
     const response = await axios.get(axiosquery);
     return response.data.departments; // [ {departmentId: number, displayName: string}) ]
   } catch (e) {
-    console.error(`ERROR - Departments Request: ...`, e.message, e.code);
+    console.error(`Departments Request ERROR:`, e.message, e.code);
     return e;
-  } 
-}
-
+  }
+};
 
 export const apiSearch = async (paramsObject) => {
-  // console.log("paramsObject", paramsObject)
+  // console.log("paramsObject: ", paramsObject)
+
+  // make sure q is at the end
   let searchTerms = { ...paramsObject, q: "*" };
   delete searchTerms.q;
   searchTerms = { hasImages: true, ...searchTerms, q: paramsObject?.q || "*" };
-  
-    searchTerms = Object.entries(searchTerms).map(p=>("&"+p[0]+"="+p[1])).join("");
-    searchTerms = searchTerms.replace(searchTerms.charAt(0),"?");
+  searchTerms = Object.entries(searchTerms).map((p) => "&" + p[0] + "=" + p[1]).join("");
+  searchTerms = searchTerms.replace(searchTerms.charAt(0), "?");
 
- // console.log(searchTerms);
+  // console.log("searchTerms: ", searchTerms);
 
   try {
     const axiosquery = `https://collectionapi.metmuseum.org/public/collection/v1/search${searchTerms}`;
     const response = await axios.get(axiosquery);
-    return response.data.objectIDs; // [ objectIDs: number ]
+    return response.data.objectIDs ?? []; // [ objectIDs: number ]
   } catch (e) {
     // Executes catch if response status isn't 200.
-    console.error(`ERROR - Query Request: ${q}...`, e.message, e.code);
+    console.error(`Query [${q}] ERROR:`, e.message, e.code);
     return e;
   }
 };
@@ -52,23 +52,21 @@ export const apiGetObject = async (id) => {
     const axiosquery = `https://collectionapi.metmuseum.org/public/collection/v1/objects/${id}`;
     const response = await axios.get(axiosquery);
     const obj = setImageOrientation(response.data);
-    return obj; // [ { theMetObject } ]
+    return obj; // theMetObject[] (array of objects)
   } catch (e) {
-    console.error(`ERROR - Query Request: ${id}...`, e.message, e.code);
+    console.error(`Query ID #[${id}] ERROR:`, e.message, e.code);
     return e;
   }
 };
-
 
 /* ORDS says : I dont understand why was it necessary to filter numbers ? */
 export const apiGetObjects = async (objectIDsArray) => {
   try {
     let objects = await Promise.all(objectIDsArray.map(apiGetObject));
-    objects = objects.filter(o=>Number.isFinite(o?.objectID))
+    objects = objects.filter((o) => Number.isFinite(o?.objectID));
     return objects;
   } catch (e) {
-    console.error(`ERROR - Query Request: ${id}...`, e.message, e.code);
+    console.error(`Query ID Array ERROR:`, e.message, e.code);
     return;
   }
 };
-
