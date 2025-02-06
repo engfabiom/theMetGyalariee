@@ -1,6 +1,6 @@
 .search-bar__container {
-  z-index : 9; 
-  position : relative ; 
+  z-index: 9;
+  position: relative;
   background-color: var(--color-bg-primary);
   min-width: 60rem;
   min-height: 20rem;
@@ -9,10 +9,6 @@
   flex-direction: column;
   justify-content: center;
   transition: all 0.3s ease-in-out;
-  box-shadow: 0px 0px 1rem 0px var(--color-shadow-light );
-  &:hover {
-    box-shadow: 0px 0px 2rem 0px var(--color-shadow-light );
-  }
 }
 
 .search-bar__input-box {
@@ -21,8 +17,9 @@
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
   padding: 0;
-  border-bottom: 3px solid var(--color-border-primary );
-  &:hover, &:hover .search-bar__input-text  {
+  border-bottom: 3px solid var(--color-border-primary);
+  
+  &:hover .search-bar__input-text {
     background-color: var(--color-bg--hover);
   }
 }
@@ -33,7 +30,7 @@
   border-radius: 1rem;
   outline: none;
   font-size: 18px;
-  padding:2rem;
+  padding: 2rem;
   color: var(--color-text-primary);
   background-color: var(--color-bg-primary);
 }
@@ -55,7 +52,7 @@
   cursor: pointer;
 }
 .search-bar__input-button:hover {
-  background-color: var(--color-btn-discreet--hover );
+  background-color: var(--color-btn-discreet--hover);
 }
 
 .search-bar__filters-box {
@@ -66,7 +63,7 @@
 
 .search-bar-svg__filters {
   background-color: var(--color-btn-primary);
-  border-radius: 50%; 
+  border-radius: 50%;
   width: 30px;
   height: 30px;
   display: flex;
@@ -84,27 +81,33 @@
 }
 
 .search-bar__filters-box:hover {
-  .search-bar-svg__filters{
-    background-color: var(--color-btn-primary--hover); }
-  .search-bar__filters-text { 
-    color : var(--color-text--hover-primary) }
+  .search-bar-svg__filters {
+    background-color: var(--color-btn-primary--hover);
+  }
+  .search-bar__filters-text {
+    color: var(--color-text--hover-primary);
+  }
+  .search-bar-svg__arrow {
+    fill: var(--color-text--hover-primary);
+  }
 }
 
-
+.search-bar-svg__arrow {
+  fill: var(--color-text-primary);
+}
 
 /* addition for the dropdown menu that is togle inside the SearchBar */
 
-
 .dropdown-menu__container {
   position: absolute;
-  top: 15rem ; 
-  left: 20rem; 
+  top: 15rem;
+  left: 20rem;
   max-height: 20rem;
   background-color: var(--color-bg--hover);
   border-radius: 1rem;
   padding: 2rem;
   gap: 2rem;
-  box-shadow: 0 0 1px var(--color-border-primary) ; 
+  box-shadow: 0 0 1px var(--color-border-primary);
   z-index: 10;
   display: flex;
   flex-direction: column;
@@ -114,7 +117,7 @@
 .dropdown-menu__item {
   display: flex;
   align-items: center;
-  gap: 0.5rem; 
+  gap: 0.5rem;
   font-size: 1.4rem;
   font-family: var(--font-serif-roboto);
   cursor: pointer;
@@ -123,11 +126,11 @@
 .dropdown-menu__checkbox {
   width: 1.5rem;
   height: 1.5rem;
-  accent-color: var(--color-checkbox); 
+  accent-color: var(--color-checkbox);
   cursor: pointer;
 }
 
 .dropdown-menu__item:hover {
-  color: var(--color-text--hover-primary); 
+  color: var(--color-text--hover-primary);
   font-weight: bold;
 }

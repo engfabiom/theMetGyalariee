@@ -6,58 +6,59 @@ import getUniqueRandom from "../helpers/getUniqueRandom";
 import { theMetAddObjects } from "../redux/theMet/actions";
 
 import CardObject from "./CardObject";
+
+console.clear();
 export default function SearchItems() {
   const dispatch = useDispatch();
 
-  const { status: searchStatus, data: searchResult } = useSelector((reducer) => reducer.theMetReducer.searchResultReducer);
-  let loading = searchStatus === "pending";
+  const { status: searchStatus, data: searchResults } = useSelector((reducer) => reducer.theMetReducer.searchResultReducer);
+  const { status: theMetObjectsStatus, data: theMetObjects } = useSelector((reducer) => reducer.theMetReducer.objectsReducer);
 
-  const { status:theMetObjectsStatus, data: theMetObjects } = useSelector((reducer) => reducer.theMetReducer.objectsReducer);
-  loading |= theMetObjectsStatus === "pending";
-{/*ORDS > or more explicit : loading = loading || (theMetObjectsStatus === "pending"); */}
+  let loading = searchStatus === "pending" || theMetObjectsStatus === "pending";
   let fulfilledTMO = theMetObjectsStatus === "fulfilled";
-
   let halfSizeCounter = 0;
+
+  const setLoadingCursor = () => document.body.style.cursor = "wait";
+  const setDefaultCursor = () => document.body.style.cursor = "default";
+
+  loading ? setLoadingCursor() : setDefaultCursor();
+
+  // TODO: Review layout structure & CSS to use square instead of half-landscape...
   fulfilledTMO &&
     theMetObjects.map((obj) => {
-      if (obj.orientation === "portrait") halfSizeCounter = 3 - halfSizeCounter;
+      if (obj.orientation === "portrait") halfSizeCounter = 2 - halfSizeCounter;
       if (obj.orientation !== "portrait" && halfSizeCounter > 0) {
         halfSizeCounter--;
         obj.orientation = "square";
       }
     });
-    
-  const addObjects = (quantity) => {
-    let payload = getUniqueRandom(theMetObjects, searchResult, quantity);
+
+  const addObjects = (quantity) => { 
+    let payload = getUniqueRandom(theMetObjects, searchResults, quantity);
     dispatch(theMetAddObjects(payload));
   };
 
   useEffect(() => {
     addObjects(10);
-  }, [searchResult]);
-  
+  }, [searchResults]);
 
-  const setLoadingCursor = () => {document.body.style.cursor = "wait";};
-  const setDefaultCursor = () => {document.body.style.cursor = "default";};
+console.log(`${theMetObjects.length} / ${searchResults.length}` )
 
   return (
     <>
-      <div className="search-items">
-        {loading ? setLoadingCursor() : setDefaultCursor()}
-        {theMetObjects.map((obj) => (
-          <CardObject key={obj.objectID} tmo={obj} />
-        ))}
-      </div>
+      { !loading && !searchResults.length ? <div>No items found!</div> : null }
+      { theMetObjects.length ? <div className="search-items">
+        { theMetObjects.map((obj) => ( <CardObject key={obj.objectID} tmo={obj} /> )) }
+      </div> : null}
+      { loading ? <div>Loading...</div> : null }
 
-      
-      <button
-        className="btn__add-more-objects"
-        disabled={loading}
-        onClick={() => addObjects(10)}
-      >
-        Add More Objects
-      </button>
-      
+      {
+        searchResults.length > theMetObjects.length 
+          ? <button className="btn__add-more-objects" disabled={loading} onClick={() => addObjects(10)} >
+              Add More Objects
+            </button>
+          : null
+      }
     </>
   );
 }
