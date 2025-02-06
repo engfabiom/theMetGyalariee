@@ -1,37 +1,45 @@
 [data-theme="dark"] {
+  --color-text1: hsl(60, 10%, 60%);
+  --color-bg1: hsl(0, 3%, 5%);
 
-    /* website title colors */
-    --color-main-title : var(--color-rosybrown2 ) ; 
-    --color-main-title--shadow : var(--color-rosybrown3 ) ; 
+  --color-grayscale1: hsl(0, 0%, 0%);
+  --color-grayscale2: hsl(0, 0%, 15%);
+  --color-grayscale3: hsl(198, 10%, 45%);
+  --color-grayscale4: hsl(60, 15%, 90%);
+  --color-grayscale5: hsl(0, 0%, 100%);
 
-    /* text colors */
-    --color-text-primary : var(--color-gray1);
-    --color-text-discreet : var(--color-gray5); 
-    
-    --color-text--hover-primary: var(--color-rosybrown2); 
-    --color-text--hover-strong: var(--color-rosybrown3); 
-    
-    /* background colors */ 
-    --color-bg-primary : var(--color-gray7) ; 
-    --color-bg--hover : var(--color-gray6); 
-    
-    /*box shadow */
-    --color-shadow-light : var(--color-gray5); 
-    --color-shadow-strong : var(--color-gray4); 
-    
-    /* button colors and sort-of-buttons */ 
-    --color-btn-discreet : var(--color-gray2);
-    --color-btn-discreet--hover : var(--color-rosybrown2) ;  
+  /* website title colors */
+  --color-main-title: var(--color-rosybrown2);
+  --color-main-title--shadow: var(--color-rosybrown3);
 
-    --color-btn-primary : var(--color-gray3);
-    --color-btn-primary--hover : var(--color-rosybrown2) ;
-    
-    --color-togle-primary : var(--color-white);
-    --color-togle-secondary : var(--color-rosybrown3) ; 
-    --color-togle-border : var(--color-gray2); 
-    
-    --color-checkbox : var(--color-gray1); 
-    
-    /*border colors */ 
-    --color-border-primary : var(--color-gray2) ; 
+  /* text colors */
+  --color-text-primary: var(--color-gray1);
+  --color-text-discreet: var(--color-gray5);
+
+  --color-text--hover-primary: var(--color-rosybrown2);
+  --color-text--hover-strong: var(--color-rosybrown3);
+
+  /* background colors */
+  --color-bg-primary: var(--color-gray7);
+  --color-bg--hover: var(--color-gray6);
+
+  /*box shadow */
+  --color-shadow-light: var(--color-gray5);
+  --color-shadow-strong: var(--color-gray4);
+
+  /* button colors and sort-of-buttons */
+  --color-btn-discreet: var(--color-gray2);
+  --color-btn-discreet--hover: var(--color-rosybrown2);
+
+  --color-btn-primary: var(--color-gray3);
+  --color-btn-primary--hover: var(--color-rosybrown2);
+
+  --color-togle-primary: var(--color-white);
+  --color-togle-secondary: var(--color-rosybrown3);
+  --color-togle-border: var(--color-gray2);
+
+  --color-checkbox: var(--color-gray1);
+
+  /*border colors */
+  --color-border-primary: var(--color-gray2);
 }

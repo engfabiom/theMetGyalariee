@@ -1,0 +1,40 @@
+[data-theme="psychedelic"] {
+  /* website title colors */
+
+  --color-main-title: crimson;
+  --color-main-title--shadow: darkorchid;
+
+  /* text colors */
+  --color-text-primary: cyan;
+  --color-text-discreet: var(--color-gray5);
+
+  --color-text--hover-primary: var(--color-rosybrown2);
+  --color-text--hover-strong: var(--color-rosybrown3);
+
+  /* background colors */
+  --color-bg-primary: lemonchiffon;
+  --color-bg--hover: lightsteelblue;
+
+  /*box shadow */
+  --color-shadow-light: mediumseagreen;
+  --color-shadow-strong: mediumturquoise;
+
+  /* button colors */
+
+  --color-btn-primary: var(orange);
+  --color-btn-primary--hover: var(--color-rosybrown2);
+
+  --color-btn-discreet: var(purple);
+  --color-btn-discreet--hover: var(--color-rosybrown2);
+
+  /* togle colors */
+  --color-togle-primary: var(--color-white);
+  --color-togle-secondary: var(--color-rosybrown3);
+  --color-togle-border: var(--color-gray2);
+
+  /*Checkbox colors */
+  --color-checkbox: var(--color-gray1);
+
+  /*border colors */
+  --color-border-primary: var(--color-gray2);
+}

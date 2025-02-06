@@ -1,24 +1,32 @@
 import "../css/themeToggler.css";
-import "../css/themeColors/themeDark.css";
 import "../css/themeColors/themeDefault.css";
-import "../css/themeColors/themePsyco.css"; 
+import "../css/themeColors/themeDark.css";
+import "../css/themeColors/themeOriane.css";
+import "../css/themeColors/themeFabio.css";
+import "../css/themeColors/themePsychedelic.css";
 
-
-const ThemeToggler = ({ setIsDarkTheme, isDarkTheme }) => {
-    return (
-      <div className="theme-toggler">
-        <label htmlFor="checkbox" >
-          <input
-            type="checkbox"
-            id="checkbox"
-            onChange={() => setIsDarkTheme((prev) => !prev)}
-            checked={isDarkTheme}
-          />
-          {isDarkTheme ? "Dark" : "Light"}
-          <span></span>
-        </label>
-      </div>
-    );
+const ThemeToggler = ({ colorTheme, setColorTheme, systemTheme }) => {
+  const handleChange = (event) => {
+    setColorTheme(event.target.value);
   };
-  
-  export default ThemeToggler;
+
+  return (
+    <div className="theme-toggler">
+      <label htmlFor="theme-selector">Theme</label>
+      <select name="theme-selector" id="theme-selector" onChange={handleChange} value={colorTheme}>
+        <optgroup label="Standard">
+          <option value={systemTheme}>System</option>
+          <option value="light">Light</option>
+          <option value="dark">Dark</option>
+        </optgroup>
+        <optgroup label="Custom">
+          <option value="oriane">Oriane</option>
+          <option value="fabio">Fabio</option>
+          <option value="psychedelic">Psychedelic</option>
+        </optgroup>
+      </select>
+    </div>
+  );
+};
+
+export default ThemeToggler;

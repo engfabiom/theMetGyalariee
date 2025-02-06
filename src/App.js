@@ -5,12 +5,12 @@ import WebsiteHeader from "./components/WebsiteHeader";
 import Search from "./components/Search";
 
 const App = () => {
-  const themePreference = window.matchMedia("(prefers-color-scheme: dark)").matches;
-  const [isDarkTheme, setIsDarkTheme] = useLocalStorage("isDarkTheme",themePreference);
+  const themePreference = window.matchMedia("(prefers-color-scheme: dark)").matches? "dark" : "light";
+  const [colorTheme, setColorTheme] = useLocalStorage("colorTheme",themePreference);
 
   return (
-    <div id="app" className="app" data-theme={isDarkTheme ? "dark" : "light"}>
-      <ThemeToggler setIsDarkTheme={setIsDarkTheme} isDarkTheme={isDarkTheme} />
+    <div id="app" className="app" data-theme={colorTheme}>
+      <ThemeToggler colorTheme={colorTheme} setColorTheme={setColorTheme} systemTheme={themePreference} />
       <WebsiteHeader />
       <Search />
     </div>

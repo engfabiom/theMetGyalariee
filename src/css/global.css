@@ -1,15 +1,14 @@
-
 /* ========== DEFINE GLOBAL VARIABLES ============== */
 :root {
   /* === FONTS ===*/
   --font-serif-roboto: "Roboto Mono", monospace;
   --font-sans-serif-montserrat: "Montserrat Alternates", sans-serif;
 
-/*  backdrop-filter: blur(10px); Applique un flou derrière */
-/*mix-blend-mode: overlay; accentuer le contraste entre arriere plan et le devant */
+  /*  backdrop-filter: blur(10px); Applique un flou derrière */
+  /*mix-blend-mode: overlay; accentuer le contraste entre arriere plan et le devant */
 
   /* === FIXED COLORS === */
-    /* Naming new colors => base name on a color-scale : 
+  /* Naming new colors => base name on a color-scale : 
     example :   color-greenscale1 (the lighter) to 5 (the darker)*/
 
   --color-gray1: hsl(0, 0%, 90%);
@@ -21,26 +20,24 @@
   --color-gray7: hsl(0, 0%, 15%);
   --color-gray8: hsl(0, 0%, 5%);
 
-/* dark and white */
+  /* dark and white */
   --color-dark: #000000;
   --color-white: #ffffff;
 
-/* rosybrown */ 
-  --color-rosybrown1 : #e1b0ac;
-  --color-rosybrown2 : #cf8985;
-  --color-rosybrown3 : #b04f4f;
-  --color-rosybrown4 : #76373D;
+  /* rosybrown */
+  --color-rosybrown1: #e1b0ac;
+  --color-rosybrown2: #cf8985;
+  --color-rosybrown3: #b04f4f;
+  --color-rosybrown4: #76373d;
 
-/* another color scale for example green */ 
---color-green1: #94b4a5;
---color-green2: #7aa190;
---color-green3: #618f7b;
---color-green4: #467e67;
---color-green5: #2a6c54;
---color-green6: #005b41;
+  /* another color scale for example green */
+  --color-green1: #94b4a5;
+  --color-green2: #7aa190;
+  --color-green3: #618f7b;
+  --color-green4: #467e67;
+  --color-green5: #2a6c54;
+  --color-green6: #005b41;
 }
-
-
 
 /* ========= DEFINE GLOBAL STYLING ========= */
 *,
@@ -78,11 +75,10 @@ body,
   flex: 1;
   flex-direction: column;
   position: relative;
-  padding: 2rem 0; 
+  padding: 2rem 0;
   font-weight: 400;
   font-family: var(--font-sans-serif-montserrat);
   font-size: 1.6rem;
-  color: var(--color-text-primary);
-  background-color: var(--color-bg-primary) ;
+  color: var(--color-text1);
+  background-color: var(--color-bg1);
 }
-

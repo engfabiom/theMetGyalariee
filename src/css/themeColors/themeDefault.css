@@ -1,5 +1,4 @@
-
-/* === MODE COLORS  === */ 
+/* === MODE COLORS  === */
 
 /* Creating and naming new functional colors => 
       base name on the color's purpose :  example : color-card-border
@@ -11,44 +10,42 @@
       background: repeating-linear-gradient(45deg, #ff00ff, #00ffff 10px, #ffcc00 20px); } 
 */
 
-
-/* === DEFAUT THEME = LIGHT  === */ 
+/* === DEFAUT THEME = LIGHT  === */
 
 :root {
-
-/* website title colors */
---color-main-title : var(--color-rosybrown2 ) ; 
---color-main-title--shadow : var(--color-rosybrown1 ) ; 
+  /* website title colors */
+  --color-main-title: var(--color-rosybrown2);
+  --color-main-title--shadow: var(--color-rosybrown1);
 
   /* text colors */
---color-text-primary : var(--color-gray8);
---color-text-discreet : var(--color-gray3); 
+  --color-text-primary: var(--color-gray8);
+  --color-text-discreet: var(--color-gray3);
 
---color-text--hover-primary: var(--color-rosybrown2); 
---color-text--hover-strong: var(--color-rosybrown3); 
+  --color-text--hover-primary: var(--color-rosybrown2);
+  --color-text--hover-strong: var(--color-rosybrown3);
 
-/* background colors */ 
---color-bg-primary : var(--color-white) ; 
---color-bg--hover : var(--color-gray1); 
+  /* background colors */
+  --color-bg-primary: var(--color-white);
+  --color-bg--hover: var(--color-gray1);
 
-/*box shadow */
---color-shadow-light : var(--color-gray1); 
---color-shadow-strong : var(--color-gray3); 
+  /*box shadow */
+  --color-shadow-light: var(--color-gray1);
+  --color-shadow-strong: var(--color-gray3);
 
-/* button colors and sort-of-buttons */ 
+  /* button colors and sort-of-buttons */
 
---color-btn-primary : var(--color-gray3);
---color-btn-primary--hover : var(--color-rosybrown2) ;
+  --color-btn-primary: var(--color-gray3);
+  --color-btn-primary--hover: var(--color-rosybrown2);
 
---color-btn-discreet : var(--color-gray7);
---color-btn-discreet--hover : var(--color-rosybrown2) ;  
+  --color-btn-discreet: var(--color-gray7);
+  --color-btn-discreet--hover: var(--color-rosybrown2);
 
---color-togle-primary : var(--color-white);
---color-togle-secondary : var(--color-rosybrown3) ; 
---color-togle-border : var(--color-gray2); 
+  --color-togle-primary: var(--color-white);
+  --color-togle-secondary: var(--color-rosybrown3);
+  --color-togle-border: var(--color-gray2);
 
---color-checkbox : var(--color-gray4); 
+  --color-checkbox: var(--color-gray4);
 
-/*border colors */ 
---color-border-primary : var(--color-gray7) ; 
+  /*border colors */
+  --color-border-primary: var(--color-gray7);
 }
