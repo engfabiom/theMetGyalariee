@@ -1,93 +1,87 @@
 /* === card ======================================== */
 .card {
-  height: 15rem;
+  height: 25rem;
   display: flex;
   background-color: var(--color-bg-primary);
   gap: 2rem;
   justify-content: start;
   align-items: center;
   text-wrap: nowrap;
-  padding: 3rem ;
+  padding: 3rem;
   border-radius: 4px;
-  scale: 0.98;
   transition: all 0.3s ease-in-out;
-  box-shadow: 0px 0px 1rem 0px var(--color-shadow-light );
+  box-shadow: 0px 0px 10px 0px var(--color-shadow-light);
   &:hover {
-    box-shadow: 0px 0px 5rem 0px var(--color-shadow-strong );
-    scale: 1;
+    box-shadow: 0px 0px 25px 0px var(--color-shadow-strong);
+    scale: 1.02;
   }
-  &:hover .card-info { 
-    color: var(--color-text--hover-primary) ;
+  &:hover .card-info {
+    color: var(--color-text--hover-primary);
   }
-  &:hover .card-info__title { 
-    color: var(--color-text--hover-strong) ;
+  &:hover .card-info__title {
+    color: var(--color-text--hover-strong);
   }
-
-  }
-  /* === card-info =================================== */
-  .card-info {
-    * {
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-    width: 25rem ;     
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    flex-wrap: nowrap;
-    text-align: left;
-    .card-info__title {
-      font-size: larger;
-      font-weight: 600;
-      text-wrap: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      padding : 0.5rem 0 ; 
-    }
-    .card-info__artist {
-      margin: 0.5rem 0 1rem;
-    }
-    .card-info__object-name,
-    .card-info__department {
-      font-style: italic;
-    }
-  }
-
-  /* === card-image ================================== */
-  .card-image {
-    display: flex;
-    flex: 1;
-    justify-content: center; 
-    align-items: center;
+}
+/* === card-info =================================== */
+.card-info {
+  * {
     overflow: hidden;
-    height: 100%;
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      border-radius: 0.5rem;
-    }
+    text-overflow: ellipsis;
   }
+  width: 25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  flex-wrap: nowrap;
+  text-align: left;
+  .card-info__title {
+    font-size: larger;
+    font-weight: 600;
+    text-wrap: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 0.5rem 0;
+  }
+  .card-info__artist {
+    margin: 0.5rem 0 1rem;
+  }
+  .card-info__object-name,
+  .card-info__department {
+    font-style: italic;
+  }
+}
 
-
+/* === card-image ================================== */
+.card-image {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  height: 100%;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 0.5rem;
+  }
+}
 
 /* === PORTRAIT ================================== */
 .card.portrait {
-  grid-row-start: span 3;
+  grid-row-start: span 4;
   grid-column-start: span 1;
-  height: 49rem;
+  height: 53rem;
   flex-direction: column;
-  }
+}
 
 /* === SQUARE ================================== */
 .card.square {
   grid-row-start: span 2;
   grid-column-start: span 1;
-  height: 32.5rem;
+  height: 25rem;
   flex-direction: column;
 }
-
-
 
 /* === LANDSCAPE ================================== */
 .card.landscape {
@@ -96,7 +90,5 @@
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
-  height: 32.5rem;
+  height: 25rem;
 }
-
-

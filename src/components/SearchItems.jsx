@@ -23,7 +23,6 @@ export default function SearchItems() {
 
   loading ? setLoadingCursor() : setDefaultCursor();
 
-  // TODO: Review layout structure & CSS to use square instead of half-landscape...
   fulfilledTMO &&
     theMetObjects.map((obj) => {
       if (obj.orientation === "portrait") halfSizeCounter = 2 - halfSizeCounter;
