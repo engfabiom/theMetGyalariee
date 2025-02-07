@@ -33,7 +33,7 @@ export default function SearchItems() {
       }
     });
 
-  const addObjects = (quantity) => { 
+  const addObjects = (quantity = 10) => { 
     let payload = getUniqueRandom(theMetObjects, searchResults, quantity);
     dispatch(theMetAddObjects(payload));
   };
@@ -42,22 +42,30 @@ export default function SearchItems() {
     addObjects(10);
   }, [searchResults]);
 
-console.log(`${theMetObjects.length} / ${searchResults.length}` )
+// console.log(`Objects: ${theMetObjects.length} / ${searchResults.length}` )
 
   return (
     <>
-      { !loading && !searchResults.length ? <div>No items found!</div> : null }
-      { theMetObjects.length ? <div className="search-items">
-        { theMetObjects.map((obj) => ( <CardObject key={obj.objectID} tmo={obj} /> )) }
-      </div> : null}
-      { loading ? <div>Loading...</div> : null }
+      { !loading && 
+        (!theMetObjects.length 
+          ? <div>No items found!</div> 
+          : <div>Search results:</div>) 
+      }
 
-      {
-        searchResults.length > theMetObjects.length 
-          ? <button className="btn__add-more-objects" disabled={loading} onClick={() => addObjects(10)} >
-              Add More Objects
-            </button>
-          : null
+      { theMetObjects.length 
+        ? <div className="search-items">
+            { theMetObjects.map((obj) => ( <CardObject key={obj.objectID} tmo={obj} /> )) }
+          </div> 
+        : null
+      }
+
+      { loading ? <div>Searching...</div> : null }
+
+      { searchResults.length > theMetObjects.length 
+        ? <button className="btn__add-more-objects" disabled={loading} onClick={() => addObjects(10)} >
+            Add More Objects
+          </button>
+        : null
       }
     </>
   );
