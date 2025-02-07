@@ -9,8 +9,8 @@ export const getUniqueRandom = async ( currentObjectsArray, universeIDArray, qua
     let finalObjects = [];
     let limitObjects = Math.min(quantity, universeIDArray.length - currentObjectsArray.length);
 
-    const limitAPIErrorResponses = 10;
-    const limitImageErrorResponses = 10;
+    const limitAPIErrorResponses = Math.min(5,universeIDArray.length);
+    const limitImageErrorResponses = Math.min(5,universeIDArray.length);
 
     let imageErrors = limitImageErrorResponses;
     while (finalObjects.length < limitObjects) {
