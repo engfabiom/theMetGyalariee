@@ -21,10 +21,10 @@ export const getUniqueRandom = async ( currentObjectsArray, universeIDArray, qua
         while ( initialIDs.has(randomId) || finalObjects.some((o) => o?.objectID === randomId) || randomId === undefined )
           randomId = universeIDArray[Math.floor(Math.random() * universeIDArray.length)];
         obj = await apiGetObject(randomId);
-        !obj && apiErrors--;
+        !obj?.objectID && apiErrors--;
         if (apiErrors === 0) break;
       }
-      obj = await setImageOrientation(obj);
+      obj = obj?.objectID ? await setImageOrientation(obj) : null;
       !obj && imageErrors--;
       if (imageErrors === 0) break;
       obj && finalObjects.push(obj);
