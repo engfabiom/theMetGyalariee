@@ -20,6 +20,7 @@ function SearchBar() {
     q: "",
     isHighlight: false,
     isOnView: false,
+    all: true,
     title: false,
     tags: false,
     artistOrCulture: false,
@@ -27,10 +28,13 @@ function SearchBar() {
 
   function handleChange(event) {
     const { type, name, value, checked } = event.target;
-    setParams((prev) => ({
-      ...prev,
-      [name]: type === "checkbox" ? checked : value,
-    }));
+    setParams((prev) => {
+      let result = {...prev }
+      if (type === "checkbox") result = { ...result, [name]: checked }
+      else if (type === "radio" ) result = { ...result, all: false, title: false, tags: false, artistOrCulture: false, [value]: checked }
+      else result = { ...result, [name]: value }
+      return result;
+      });
   }
 
   function newQ(event) {
@@ -42,6 +46,10 @@ function SearchBar() {
       q: "",
       isHighlight: false,
       isOnView: false,
+      all: true,
+      title: false,
+      tags: false,
+      artistOrCulture: false,  
     });
   }
 
@@ -68,18 +76,25 @@ function SearchBar() {
             <input name="isOnView" checked={params.isOnView} type="checkbox" className="dropdown-menu__checkbox" onChange={handleChange} />
             Visible at the MET
           </label>
-          <label className="dropdown-menu__item">
-            <input name="title" checked={params.title} type="checkbox" className="dropdown-menu__checkbox" onChange={handleChange} />
-            Search against titles
-          </label>
-          <label className="dropdown-menu__item">
-            <input name="tags" checked={params.tags} type="checkbox" className="dropdown-menu__checkbox" onChange={handleChange} />
-            Search against tags
-          </label>
-          <label className="dropdown-menu__item">
-            <input name="artistOrCulture" checked={params.artistOrCulture} type="checkbox" className="dropdown-menu__checkbox" onChange={handleChange} />
-            Searching against the artist name or culture
-          </label>
+          <fieldset>
+            <legend>Search against:</legend>
+            <label className="dropdown-menu__item">
+              <input name="against" value="all" checked={params.all} type="radio" className="dropdown-menu__radio" onChange={handleChange} />
+              All Objects
+            </label>
+            <label className="dropdown-menu__item">
+              <input name="against" value="title" checked={params.title} type="radio" className="dropdown-menu__radio" onChange={handleChange} />
+              Titles
+            </label>
+            <label className="dropdown-menu__item">
+              <input name="against" value="tags" checked={params.tags} type="radio" className="dropdown-menu__radio" onChange={handleChange} />
+              Tags
+            </label>
+            <label className="dropdown-menu__item">
+              <input name="against" value="artistOrCulture" checked={params.artistOrCulture} type="radio" className="dropdown-menu__radio" onChange={handleChange} />
+              Artist or Culture
+            </label>
+          </fieldset>
         </div>
       )}
     </div>
