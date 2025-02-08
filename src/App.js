@@ -1,19 +1,22 @@
-import ThemeToggler from "./components/ThemeToggler";
-import useLocalStorage from "use-local-storage";
-import WebsiteHeader from "./components/WebsiteHeader";
+import { useSelector } from "react-redux";
 
+import ThemeToggler from "./components/ThemeToggler";
+import WebsiteHeader from "./components/WebsiteHeader";
 import Search from "./components/Search";
+import Footer from "./components/Footer";
 
 const App = () => {
-  const themePreference = window.matchMedia("(prefers-color-scheme: dark)").matches? "dark" : "light";
-  const [colorTheme, setColorTheme] = useLocalStorage("colorTheme",themePreference);
+  const colorTheme = useSelector((reducer) => reducer.colorThemeReducer);
 
   return (
-    <div id="app" className="app" data-theme={colorTheme}>
-      <ThemeToggler colorTheme={colorTheme} setColorTheme={setColorTheme} systemTheme={themePreference} />
-      <WebsiteHeader />
-      <Search />
-    </div>
+    <>
+      <div id="app" className="app" data-theme={colorTheme}>
+        <ThemeToggler />
+        <WebsiteHeader />
+        <Search />
+        <Footer />
+      </div>
+    </>
   );
 };
 

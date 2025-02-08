@@ -4,10 +4,18 @@ import "../css/themeColors/themeDark.css";
 import "../css/themeColors/themeOriane.css";
 import "../css/themeColors/themeFabio.css";
 import "../css/themeColors/themePsychedelic.css";
+import { useDispatch, useSelector } from "react-redux";
+import {setColorTheme} from "../redux/rootActions"
 
-const ThemeToggler = ({ colorTheme, setColorTheme, systemTheme }) => {
+const ThemeToggler = () => {
+
+  const dispatch = useDispatch();
+
+  const colorTheme = useSelector(reducer => reducer.colorThemeReducer);
+  const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches? "dark" : "light";
+
   const handleChange = (event) => {
-    setColorTheme(event.target.value);
+    dispatch(setColorTheme(event.target.value));
   };
 
   return (

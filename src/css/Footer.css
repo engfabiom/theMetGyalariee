@@ -1,0 +1,12 @@
+.footer {
+    margin: 2rem 0 0;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    button {
+        border: none;
+        color: var(--color-primary);
+        background-color: transparent;
+        cursor: pointer;
+    }
+}
