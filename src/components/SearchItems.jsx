@@ -1,5 +1,5 @@
 import "../css/searchItems.css";
-import { useEffect } from "react";
+import { useEffect, useState} from "react";
 import { useSelector, useDispatch } from "react-redux";
 
 import getUniqueRandom from "../helpers/getUniqueRandom";
@@ -43,6 +43,26 @@ export default function SearchItems() {
 
 // console.log(`Objects: ${theMetObjects.length} / ${searchResults.length}` )
 
+// Adding the hook to set one of the displayed objects as a Zoom Target
+ const [ zoomTarget, setZoomTarget] = useState(null) ;
+ function handleZoomTarget(target) { 
+  event.stopPropagation(); 
+   setZoomTarget(!zoomTarget ? target : zoomTarget.objectID === target.objectID ? null : target);
+ }
+
+ useEffect(() => {
+    const handleClickOutsideTarget = () => {
+      setZoomTarget(null);
+    };
+    if (zoomTarget) {
+      document.addEventListener("click", handleClickOutsideTarget);
+    }
+    return () => {
+      document.removeEventListener("click", handleClickOutsideTarget);
+    };
+  }, [zoomTarget]);
+
+
   return (
     <>
       { !loading && 
@@ -53,9 +73,17 @@ export default function SearchItems() {
 
       { theMetObjects.length 
         ? <div className="search-items">
-            { theMetObjects.map((obj) => ( <CardObject key={obj.objectID} tmo={obj} /> )) }
+            { theMetObjects.map((obj) => ( <CardObject key={obj.objectID} tmo={obj} onClick={handleZoomTarget} /> )) }
           </div> 
         : null
+      }
+
+
+
+      { zoomTarget 
+        ? <CardObject tmo={zoomTarget} onClick={handleZoomTarget} currentTarget="zoomTarget"> 
+        </CardObject>
+        : null 
       }
 
       { loading ? <div>Searching...</div> : null }
