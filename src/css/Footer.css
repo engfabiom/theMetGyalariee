@@ -1,12 +1,14 @@
 .footer {
-    margin: 2rem 0 0;
-    padding: 2rem;
-    display: flex;
-    justify-content: space-between;
-    button {
-        border: none;
-        color: var(--color-primary);
-        background-color: transparent;
-        cursor: pointer;
-    }
+  margin: 6rem 0 0;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--color-bg--hover);
+  box-shadow: 0 -2px 8px 0 var(--color-shadow-strong);
+  button {
+    border: none;
+    color: var(--color-primary);
+    background-color: transparent;
+    cursor: pointer;
+  }
 }

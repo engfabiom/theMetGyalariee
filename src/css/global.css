@@ -75,7 +75,7 @@ body,
   flex: 1;
   flex-direction: column;
   position: relative;
-  padding: 2rem 0;
+  padding: 2rem 0 0;
   font-weight: 400;
   font-family: var(--font-sans-serif-montserrat);
   font-size: 1.6rem;
