@@ -1,7 +1,7 @@
 .theme-toggler {
   position: fixed;
   top: 1rem;
-  right: .5rem;
+  right: 1rem;
   z-index: 1;
   * {
     cursor: pointer;
@@ -10,6 +10,7 @@
     display: flex;
     font-weight: bold;
     font-size: small;
+    justify-content: left;
     input[type="checkbox"] {
       appearance: none;
       & + span {
@@ -56,6 +57,18 @@
       &:checked:active ~ span {
         border-radius: 0.8rem;
         box-shadow: 0 0 8px 4px var(--color-togl1);
+      }
+    }
+  }
+  select {
+    overflow: hidden;
+    color: var(--color-text-primary);
+    background: var(--color-bg-primary);
+    border-radius: 4px;
+    optgroup {
+      text-align: left;
+      option {
+        font-size: 1.3rem;
       }
     }
   }

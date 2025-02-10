@@ -1,4 +1,4 @@
-import "../css/themeToggler.css";
+import "../css/ThemeToggler.css";
 import "../css/themeColors/themeDefault.css";
 import "../css/themeColors/themeDark.css";
 import "../css/themeColors/themeOriane.css";
@@ -20,7 +20,7 @@ const ThemeToggler = () => {
 
   return (
     <div className="theme-toggler">
-      <label htmlFor="theme-selector">Theme</label>
+      <label htmlFor="theme-selector">Color Theme</label>
       <select name="theme-selector" id="theme-selector" onChange={handleChange} value={colorTheme}>
         <optgroup label="Standard">
           <option value={systemTheme}>System</option>

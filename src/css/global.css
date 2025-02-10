@@ -79,6 +79,6 @@ body,
   font-weight: 400;
   font-family: var(--font-sans-serif-montserrat);
   font-size: 1.6rem;
-  color: var(--color-text1);
+  color: var(--color-text-primary);
   background-color: var(--color-bg1);
 }
