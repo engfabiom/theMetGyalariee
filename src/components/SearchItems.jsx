@@ -1,5 +1,5 @@
 import "../css/searchItems.css";
-import { useEffect, useState} from "react";
+import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 
 import getUniqueRandom from "../helpers/getUniqueRandom";
@@ -11,29 +11,37 @@ console.clear();
 export default function SearchItems() {
   const dispatch = useDispatch();
 
-  const { status: searchStatus, data: searchResults } = useSelector((reducer) => reducer.theMetReducer.searchResultReducer);
-  const { status: theMetObjectsStatus, data: theMetObjects } = useSelector((reducer) => reducer.theMetReducer.objectsReducer);
+  const { status: searchStatus, data: searchResults } = useSelector( (reducer) => reducer.theMetReducer.searchResultReducer );
+  const { status: theMetObjectsStatus, data: theMetObjects } = useSelector( (reducer) => reducer.theMetReducer.objectsReducer );
 
-  let loading = searchStatus === "pending" || theMetObjectsStatus === "pending";
-  let fulfilledTMO = theMetObjectsStatus === "fulfilled";
+  const loading = searchStatus === "pending" || theMetObjectsStatus === "pending";
+  document.body.style.cursor = loading ? "wait" : "default";
+
+  const fulfilledTMO = theMetObjectsStatus === "fulfilled";
   let halfSizeCounter = 0;
-
-  const setLoadingCursor = () => document.body.style.cursor = "wait";
-  const setDefaultCursor = () => document.body.style.cursor = "default";
-
-  loading ? setLoadingCursor() : setDefaultCursor();
-
   fulfilledTMO &&
     theMetObjects.map((obj) => {
-      if (obj.orientation === "portrait") halfSizeCounter = 2 - halfSizeCounter;
-      if (obj.orientation !== "portrait" && halfSizeCounter > 0) {
-        halfSizeCounter--;
-        obj.orientation = "square";
+      switch (obj.orientation) {
+        case "portrait":
+          halfSizeCounter = 2 - halfSizeCounter;
+          break;
+        case "landscape":
+          if (halfSizeCounter > 0) {
+            halfSizeCounter--;
+            obj.orientation = "square";
+          }
+          break;
+        case "square":
+          if (halfSizeCounter > 0) halfSizeCounter--;
+          else halfSizeCounter = 1;
+          break;
+        default:
+          break;
       }
     });
 
-  const addObjects = (quantity = 10) => { 
-    let payload = getUniqueRandom(theMetObjects, searchResults, quantity);
+  const addObjects = (quantity = 10) => {
+    const payload = getUniqueRandom(theMetObjects, searchResults, quantity);
     dispatch(theMetAddObjects(payload));
   };
 
@@ -41,19 +49,17 @@ export default function SearchItems() {
     addObjects(10);
   }, [searchResults]);
 
-// console.log(`Objects: ${theMetObjects.length} / ${searchResults.length}` )
+  // Adding the hook to set one of the displayed objects as a Zoom Target
+  const [zoomTarget, setZoomTarget] = useState(null);
+  function handleZoomTarget(target) {
+    event.stopPropagation();
+    const zoomTargetClick = document.querySelector(".zoomTarget")?.contains(event.target);
+    !zoomTarget && setZoomTarget(target); // SHOW if not shown
+    zoomTarget && !zoomTargetClick && setZoomTarget(null); // DISMISS if zoomTarget is shown AND clicked on a different card
+  }
 
-// Adding the hook to set one of the displayed objects as a Zoom Target
- const [ zoomTarget, setZoomTarget] = useState(null) ;
- function handleZoomTarget(target) { 
-  event.stopPropagation(); 
-   setZoomTarget(!zoomTarget ? target : zoomTarget.objectID === target.objectID ? null : target);
- }
-
- useEffect(() => {
-    const handleClickOutsideTarget = () => {
-      setZoomTarget(null);
-    };
+  useEffect(() => {
+    const handleClickOutsideTarget = () => setZoomTarget(null);
     if (zoomTarget) {
       document.addEventListener("click", handleClickOutsideTarget);
     }
@@ -62,31 +68,27 @@ export default function SearchItems() {
     };
   }, [zoomTarget]);
 
-
   return (
     <>
       { !loading && 
-        (!theMetObjects.length 
-          ? <div>No items found!</div> 
-          : <div>Search results:</div>) 
+        (!theMetObjects.length  
+          ? <div>No items found!</div>
+          : <div>Search results:</div>)
       }
 
       { theMetObjects.length 
         ? <div className="search-items">
-            { theMetObjects.map((obj) => ( <CardObject key={obj.objectID} tmo={obj} onClick={handleZoomTarget} /> )) }
-          </div> 
+            { theMetObjects.map( (obj) => <CardObject key={obj.objectID} tmo={obj} onClick={handleZoomTarget} /> ) }
+          </div>
         : null
       }
 
-
-
       { zoomTarget 
-        ? <CardObject tmo={zoomTarget} onClick={handleZoomTarget} currentTarget="zoomTarget"> 
-        </CardObject>
-        : null 
+        ? <CardObject tmo={zoomTarget} onClick={handleZoomTarget} currentTarget="zoomTarget" />
+        : null
       }
 
-      { loading ? <div>Searching...</div> : null }
+      { loading ? <div>Searching...</div> : null}
 
       { searchResults.length > theMetObjects.length 
         ? <button className="btn__add-more-objects" disabled={loading} onClick={() => addObjects(10)} >
