@@ -23,11 +23,9 @@ export default function CardObject({ tmo, onClick, currentTarget = "" }) {
 
   return (
     <div id={tmo.objectID} className={classes} onClick={() => onClick(tmo)}>
-      <CardInfo
-        {...tmo}
-        {...(currentTarget ? { currentTarget, origin } : {})}
-      />
+      <CardInfo {...tmo} {...(currentTarget ? { currentTarget, origin } : {})} />
       <CardImage {...tmo} />
+      {currentTarget && <div style={{fontSize: "1.1rem", position:"relative", bottom:"-2rem"}}>To EXIT, click outside...</div>}
     </div>
   );
 }
