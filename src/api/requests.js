@@ -1,5 +1,4 @@
 import axios from "axios";
-import { URLSearchParams } from "url";
 import { setImageOrientation } from "../helpers/setImageOrientation";
 
 export const apiGetAllObjects = async () => {
