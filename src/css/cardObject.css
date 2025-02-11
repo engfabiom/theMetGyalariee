@@ -1,5 +1,6 @@
 /* === card ======================================== */
 .card {
+  /* flex: 1; */
   height: 25rem;
   display: flex;
   background-color: var(--color-bg-primary);
@@ -115,7 +116,7 @@
   }
 }
 .card__exit-message {
-  position: relative;
-  bottom: -2rem;
+  position: absolute;
+  bottom: .5rem;
   font-size: 1.1rem;
 }
