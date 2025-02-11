@@ -114,3 +114,8 @@
     scale: none;
   }
 }
+.card__exit-message {
+  position: relative;
+  bottom: -2rem;
+  font-size: 1.1rem;
+}
