@@ -27,12 +27,13 @@ const LocalStorageConsent = ({ref}) => {
     <div className="consent-banner">
       <h2>Local Storage Consent</h2>
       <p>
-        This website uses <span>browser's localStorage</span> to remember your <span>theme preference</span> and
-        <span>consent choice</span>, helping to enhance your browsing experience by keeping
-        your settings consistent across visits.
+        This website uses <span>browser's localStorage</span> to remember 
+        your <span>theme preference</span> and <span>consent choice</span>,
+        helping to enhance your browsing experience by keeping your settings
+        consistent across visits.
       </p>
       <p>No personal data is collected, stored, or shared with third parties.</p>
-      <p>Please choose an option:</p>
+      <p>Please choose an option</p>
       <div className="buttons">
         <button className="accept" onClick={() => handleConsent(true)}>ACCEPT</button>
         <button className="deny" onClick={() => handleConsent(false)}>DENY</button>

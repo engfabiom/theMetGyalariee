@@ -1,12 +1,16 @@
-export default function CardImage({primaryImageSmall,artistDisplayName,objectName,}) {
+export default function CardImage({
+  primaryImageSmall,
+  artistDisplayName,
+  objectName,
+}) {
   return (
     <>
-      { primaryImageSmall && (
+      { primaryImageSmall && 
         <figure className="card-image">
           <img src={primaryImageSmall} alt={artistDisplayName + " " + objectName} />
           <figcaption></figcaption>
         </figure>
-      ) }
+      }
     </>
   );
 }
