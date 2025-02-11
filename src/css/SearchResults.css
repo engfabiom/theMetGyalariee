@@ -1,23 +1,25 @@
 .search-results {
+  --search-results-gap: 2.8rem;
   width: 100%;
   display: grid;
-  grid-gap: 3rem;
-  grid-template-columns: calc(50% - 1rem) calc(50% - 1rem);
-  grid-template-rows: 15rem;
+  grid-gap: var(--search-results-gap);
+  grid-template-columns: 
+    calc(50% - var(--search-results-gap) / 2) 
+    calc(50% - var(--search-results-gap) / 2 );
+  grid-template-rows: calc(5 * var(--search-results-gap) );
   grid-auto-rows: auto;
   grid-auto-flow: dense;
 }
 
 .btn__add-more-objects {
-  padding: 0.5rem 1rem;
+  padding: 1rem 0;
   border: none;
   border-radius: 0.3rem;
   color: var(--color-text-primary);
   background-color: var(--color-btn-primary);
   font-size: 1.6rem;
-  margin: 0 auto 2rem;
-  padding: 3rem;
-  width: 25rem;
+  margin: 1rem auto 0;
+  width: 40%;
   scale: 0.99;
   transition: all 0.3s ease-in-out;
   box-shadow: 0px 0px 1rem 0px var(--color-shadow-light);
