@@ -1,13 +1,13 @@
 import "../css/search.css";
 import SearchBar from "./SearchBar";
-import SearchItems from "./SearchItems";
+import SearchResults from "./SearchResults";
 
 
 export default function Search() {
   return (
     <div className="search-container">
       <SearchBar />
-      <SearchItems />
+      <SearchResults />
     </div>
   );
 }

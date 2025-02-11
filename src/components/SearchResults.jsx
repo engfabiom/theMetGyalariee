@@ -1,4 +1,4 @@
-import "../css/searchItems.css";
+import "../css/SearchResults.css";
 import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 
@@ -77,7 +77,7 @@ export default function SearchItems() {
       }
 
       { theMetObjects.length 
-        ? <div className="search-items">
+        ? <div className="search-results">
             { theMetObjects.map( (obj) => <CardObject key={obj.objectID} tmo={obj} onClick={handleZoomTarget} /> ) }
           </div>
         : null

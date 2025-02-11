@@ -1,4 +1,4 @@
-.search-items {
+.search-results {
   width: 100%;
   display: grid;
   grid-gap: 3rem;
@@ -13,24 +13,21 @@
   border: none;
   border-radius: 0.3rem;
   color: var(--color-text-primary);
-  background-color: var(--color-btn-primary );
+  background-color: var(--color-btn-primary);
   font-size: 1.6rem;
   margin: 0 auto 2rem;
   padding: 3rem;
   width: 25rem;
   scale: 0.99;
   transition: all 0.3s ease-in-out;
-  box-shadow: 0px 0px 1rem 0px var(--color-shadow-light );
+  box-shadow: 0px 0px 1rem 0px var(--color-shadow-light);
+  cursor: pointer;
   &:hover {
     background-color: var(--color-btn-primary--hover);
-    box-shadow: 0px 0px 2rem 0px var(--color-shadow-light );
+    box-shadow: 0px 0px 2rem 0px var(--color-shadow-light);
     scale: 1;
   }
-  /* ORDS remark : why not disabled */
-  &:not([disabled]) {
-    cursor: pointer;
-  }
-  &:disabled, 
+  &:disabled,
   &[disabled] {
     color: var(--color-grayscale3);
     cursor: wait;
