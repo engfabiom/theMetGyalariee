@@ -1,4 +1,4 @@
-import "../css/ThemeToggler.css";
+import "../css/themeToggler.css";
 import "../css/themeColors/themeDefault.css";
 import "../css/themeColors/themeDark.css";
 import "../css/themeColors/themeOriane.css";
