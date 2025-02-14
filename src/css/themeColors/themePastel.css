@@ -1,0 +1,44 @@
+[data-theme="pastel"] {
+  /* a scale of pastel */
+  --color-pastel1: rgb(98, 78, 136);  
+  --color-pastel2:rgb(35, 72, 106); 
+  --color-pastel3: rgb(35, 72, 106, 0.5); 
+  --color-pastel4: rgb(98, 78, 136, 0.2);
+
+    /* website title colors */
+    --color-main-title: var(--color-pastel2);
+    --color-main-title--shadow: var(--color-pastel3);
+  
+    /* text colors */
+    --color-text-primary: var(--color-pastel1);
+    --color-text-discreet: var(--color-pastel2);
+  
+    --color-text--hover-primary: var(--color-pastel3);
+    --color-text--hover-strong: var(--color-pastel2);
+  
+    /* background colors */
+    --color-bg-primary: var(--color-pastel4);
+    --color-bg-strong: var(--color-gray1); 
+    --color-bg--hover: var(--color-pastel3);
+  
+    /*box shadow */
+    --color-shadow-light: var(--color-pastel1);
+    --color-shadow-strong: var(--color-pastel3);
+  
+    /* button colors and sort-of-buttons */
+    --color-btn-discreet: var(--color-pastel3);
+    --color-btn-discreet--hover: var(--color-pastel2);
+  
+    --color-btn-primary: var(--color-pastel4);
+    --color-btn-primary--hover: var(--color-pastel3);
+  
+    --color-togle-primary: var(--color-white);
+    --color-togle-secondary: var(--color-pastel3);
+    --color-togle-border: var(--color-gray2);
+  
+    --color-checkbox: var(--color-gray1);
+  
+    /*border colors */
+    --color-border-primary: var(--color-gray2);
+}
+  

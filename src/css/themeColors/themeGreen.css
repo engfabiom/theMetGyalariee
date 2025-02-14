@@ -1,0 +1,45 @@
+[data-theme="green"] {
+
+    /* a scale of green */
+    --color-green1: #edf6f2;
+    --color-green2: #618f7b;
+    --color-green3: #2a6c54;
+    --color-green4: #01251b;
+
+
+  /* website title colors */
+  --color-main-title: var(--color-green2);
+  --color-main-title--shadow: var(--color-green3);
+
+  /* text colors */
+  --color-text-primary: var(--color-green1);
+  --color-text-discreet: var(--color-green2);
+
+  --color-text--hover-primary: var(--color-green2);
+  --color-text--hover-strong: var(--color-green3);
+
+  /* background colors */
+  --color-bg-primary: var(--color-green4);
+  --color-bg-strong: var(--color-gray1); 
+  --color-bg--hover: var(--color-green3);
+
+  /*box shadow */
+  --color-shadow-light: var(--color-green1);
+  --color-shadow-strong: var(--color-green2);
+
+  /* button colors and sort-of-buttons */
+  --color-btn-discreet: var(--color-gray2);
+  --color-btn-discreet--hover: var(--color-green2);
+
+  --color-btn-primary: var(--color-gray3);
+  --color-btn-primary--hover: var(--color-green2);
+
+  --color-togle-primary: var(--color-white);
+  --color-togle-secondary: var(--color-green3);
+  --color-togle-border: var(--color-gray2);
+
+  --color-checkbox: var(--color-gray1);
+
+  /*border colors */
+  --color-border-primary: var(--color-gray2);
+}

@@ -35,13 +35,14 @@
   background-color: var(--color-bg-primary);
 }
 
-.search-bar__input::placeholder {
-  color: var(--color-text-discreet);
+/* not working*/
+.search-bar__input-text::placeholder{
+  color :var(--color-text-discreet) ; 
   font-family: var(--font-serif-roboto);
 }
 
 .search-bar__input-button {
-  background-color: var(--color-btn-discreet);
+  background-color: var(--color-btn-primary);
   border: none;
   border-radius: 50%;
   width: 40px;

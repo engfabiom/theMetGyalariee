@@ -30,13 +30,7 @@
   --color-rosybrown3: #b04f4f;
   --color-rosybrown4: #76373d;
 
-  /* another color scale for example green */
-  --color-green1: #94b4a5;
-  --color-green2: #7aa190;
-  --color-green3: #618f7b;
-  --color-green4: #467e67;
-  --color-green5: #2a6c54;
-  --color-green6: #005b41;
+
 }
 
 /* ========= DEFINE GLOBAL STYLING ========= */
@@ -80,5 +74,5 @@ body,
   font-family: var(--font-sans-serif-montserrat);
   font-size: 1.6rem;
   color: var(--color-text-primary);
-  background-color: var(--color-bg1);
+  background-color: var(--color-bg-primary);
 }

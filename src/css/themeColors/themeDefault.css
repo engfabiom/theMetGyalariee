@@ -26,11 +26,12 @@
 
   /* background colors */
   --color-bg-primary: var(--color-white);
+  --color-bg-strong: var(--color-gray2); 
   --color-bg--hover: var(--color-gray1);
 
   /*box shadow */
-  --color-shadow-light: var(--color-gray1);
-  --color-shadow-strong: var(--color-gray3);
+  --color-shadow-light: var(--color-gray2);
+  --color-shadow-strong: var(--color-gray4);
 
   /* button colors and sort-of-buttons */
 
