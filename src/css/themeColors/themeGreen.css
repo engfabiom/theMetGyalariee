@@ -4,8 +4,7 @@
     --color-green1: #edf6f2;
     --color-green2: #618f7b;
     --color-green3: #2a6c54;
-    --color-green4: #01251b;
-
+    --color-green4: #212e2a; 
 
   /* website title colors */
   --color-main-title: var(--color-green2);

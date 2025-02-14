@@ -6,3 +6,9 @@
   width: 80%;
   margin: 0 auto;
 }
+
+@media (max-width: 900px) {
+  .search-container {
+    width: 90% ;
+  }
+}

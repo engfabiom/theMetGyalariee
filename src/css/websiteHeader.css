@@ -35,3 +35,21 @@
     font-weight: bold;
     font-style: italic;
 }
+
+
+@media (max-width: 900px) {
+    .website-header__container {
+        margin :  0; 
+        padding: 0; 
+        width:100% ; 
+        z-index : 0; 
+        line-height: 150%;
+    }
+    .website-header__text__title {
+        font-size: 2rem;
+        line-height: 200%;
+    }
+    .website-header__text__descr { 
+        font-weight: lighter;
+    }
+  }
