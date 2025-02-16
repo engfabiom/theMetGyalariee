@@ -3,7 +3,7 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: var(--color-bg--hover);
+  background-color: var(--color-bg-strong);
   color: var(--color-primary);
   text-align: center;
   padding: 3rem;
@@ -13,11 +13,12 @@
   align-items: center;
   z-index: 9999;
   h2 {
-    color: var(--color-main-title);
+    color: var(--color-text--hover-strong );
   }
   p {
     margin: 1.5rem 0 0;
     max-width: 70vw;
+    color : var( --color-gray8)
   }
   .buttons {
     margin-top: 1rem;
