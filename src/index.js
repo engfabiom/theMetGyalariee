@@ -13,7 +13,7 @@ import { theMetSetSearchResult, theMetSetDepartments } from "./redux/rootActions
 console.clear();
 
 store.dispatch(theMetSetDepartments(apiGetDepartments()));
-store.dispatch(theMetSetSearchResult(apiSearch({isHighlight:true, hasImages:true, isOnView: true, q:"wolf"})));
+store.dispatch(theMetSetSearchResult(apiSearch({isHighlight: true, hasImages:true, isOnView: true, q:"dragon"})));
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
