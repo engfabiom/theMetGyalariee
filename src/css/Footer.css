@@ -20,8 +20,6 @@
 
 @media (max-width: 900px) {
   .footer { 
-    width: 120%;
-    position: relative;
-    right:8%; 
+    width: 100%;
   }
 }

@@ -10,5 +10,6 @@
 @media (max-width: 900px) {
   .search-container {
     width: 90% ;
+    padding: 0 2rem; 
   }
 }

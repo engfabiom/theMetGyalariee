@@ -167,11 +167,11 @@
     grid-column-start: span 1;
     grid-row-start: auto;
     height: auto;
-    width: 30rem;
+    width: 28%; /* Dont know why 100% is not working */
     flex-direction: column ;
     .card-info { 
       padding: 5rem ; 
-      order: 0 !important;
+      order: 0;
       text-align: left;
     }
   }
