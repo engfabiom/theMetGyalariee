@@ -1,7 +1,7 @@
 .theme-toggler {
   position: fixed;
   top: 1rem;
-  right: 1rem;
+  right: 3rem;
   z-index: 1;
   * {
     cursor: pointer;

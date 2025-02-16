@@ -43,5 +43,8 @@
   .search-results { 
   width : 100% ; 
   grid-template-columns: 1fr ;
+  grid-template-rows: 1fr; 
+  grid-auto-rows: max-content;
+  grid-auto-flow: row ;
   }
 }

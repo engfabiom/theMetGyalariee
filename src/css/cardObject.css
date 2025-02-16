@@ -153,12 +153,29 @@
   font-size: 1.1rem;
 }
 
-/*
+
 @media (max-width: 900px) {
-  .card {
-    &.portrait {
-      grid-row-start: span 1;
-      grid-column-start: span 1;
+  .card { 
+    box-sizing: border-box ; 
+    padding: 0rem 0rem;
+    justify-content: space-between;
+  }
+  .card-image, .card-info{ 
+    width:100% !important ; 
+  }
+  .card.portrait, .card.landscape, .card.square {
+    grid-column-start: span 1;
+    grid-row-start: auto;
+    height: auto;
+    width: 30rem;
+    flex-direction: column ;
+    .card-info { 
+      padding: 5rem ; 
+      order: 0 !important;
+      text-align: left;
     }
   }
-}*/
+  .card.zoomTarget {
+    display: none;
+  }
+}
