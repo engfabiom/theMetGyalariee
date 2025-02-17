@@ -1,15 +1,14 @@
-
 .search-container {
   display: flex;
   flex-direction: column;
   gap: 2rem;
   width: 80%;
-  margin: 0 auto;
+  margin-bottom: 10rem;
 }
 
 @media (max-width: 900px) {
   .search-container {
-    width: 90% ;
-    padding: 0 2rem; 
+    width: 90%;
+    padding: 0 2rem;
   }
 }

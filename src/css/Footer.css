@@ -5,21 +5,18 @@
   justify-content: space-between;
   background-color: var(--color-bg--hover);
   box-shadow: 0 -2px 8px 0 var(--color-shadow-light);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
   button {
     border: none;
-    padding : 0 0.8rem; 
-    border-radius: 0.5rem; 
+    padding: 0 0.8rem;
+    border-radius: 0.5rem;
     color: var(--color-primary);
     background-color: transparent;
     cursor: pointer;
   }
-  button:hover{ 
+  button:hover {
     background-color: var(--color-bg-primary);
-  }
-}
-
-@media (max-width: 900px) {
-  .footer { 
-    width: 100%;
   }
 }
