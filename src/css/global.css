@@ -29,8 +29,6 @@
   --color-rosybrown2: #cf8985;
   --color-rosybrown3: #b04f4f;
   --color-rosybrown4: #76373d;
-
-
 }
 
 /* ========= DEFINE GLOBAL STYLING ========= */
@@ -68,6 +66,7 @@ body,
   display: flex;
   flex: 1;
   flex-direction: column;
+  gap: 2rem;
   position: relative;
   padding: 2rem 0 0;
   font-weight: 400;
@@ -75,12 +74,11 @@ body,
   font-size: 1.6rem;
   color: var(--color-text-primary);
   background-color: var(--color-bg-primary);
+  align-items: center;
 }
 
 @media (max-width: 900px) {
-  #app  {  
-    padding: 0;
-    font-size: 1.2rem;
-    margin: 0 auto; 
+  #app {
+    font-size: 1.4rem;
   }
 }

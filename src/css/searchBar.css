@@ -4,7 +4,7 @@
   background-color: var(--color-bg-primary);
   width: 100%; 
   height: 20rem;
-  padding: 1rem 5rem;
+  padding: 1rem 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -33,6 +33,9 @@
   padding: 2rem;
   color: var(--color-text-primary);
   background-color: var(--color-bg-primary);
+  &:focus {
+    background-color: var(--color-bg--hover);
+  }
 }
 
 /* not working*/
@@ -101,8 +104,8 @@
 
 .dropdown-menu__container {
   position: absolute;
-  top: 15rem;
-  left: 20rem;
+  top: 11rem;
+  left: 22rem;
   max-height: 20rem;
   background-color: var(--color-bg--hover);
   border-radius: 1rem;
@@ -155,8 +158,8 @@
     width: 2.5rem; 
   }
   .dropdown-menu__container {
-    top: 10rem;
-    left: 5rem;
+    top: 6rem;
+    left: 16rem;
     max-height: 40rem;
   }
 }
