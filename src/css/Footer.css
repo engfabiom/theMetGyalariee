@@ -17,6 +17,6 @@
     cursor: pointer;
   }
   button:hover {
-    color: var(--color-main-title);
+    color: var(--color-text--hover-primary);
   }
 }
