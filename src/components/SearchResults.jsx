@@ -88,9 +88,9 @@ export default function SearchItems() {
         : null
       }
 
-      { loading ? <div>Searching...</div> : null}
+      { loading ? <div>Searching...</div> : theMetObjects.length > 0 && <div style={{textAlign: "right"}}>Items: {theMetObjects.length} / {searchResults.length}</div>}
 
-      { searchResults.length > theMetObjects.length 
+      { searchResults.length > theMetObjects.length
         ? <button className="btn__add-more-objects" disabled={loading} onClick={() => addObjects(10)} >
             Add More Objects
           </button>
