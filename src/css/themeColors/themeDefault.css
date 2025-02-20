@@ -26,6 +26,7 @@
 
   /* background colors */
   --color-bg-primary: var(--color-white);
+  --color-bg-secondary: var(--color-gray1);
   --color-bg-strong: var(--color-gray2); 
   --color-bg--hover: var(--color-gray1);
 

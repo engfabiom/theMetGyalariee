@@ -1,16 +1,10 @@
-[data-theme="pastel"] {
+[data-theme="dark-pastel"] {
   /* a scale of pastel */
-  --color-pastel1: hsl(261, 35%, 15%);
+  --color-pastel1: hsl(261, 35%, 95%);
   --color-pastel2: hsl(261, 20%, 50%);
-  --color-pastel3: hsl(261, 45%, 80%);
-  --color-pastel4: hsl(261, 15%, 90%);
-  --color-pastel5: hsl(261, 15%, 85%);
-
-  --color-green1: hsl(153, 35%, 95%);
-  --color-green2: hsl(153, 20%, 50%);
-  --color-green3: hsl(153, 45%, 30%);
-  --color-green4: hsl(153, 15%, 15%);
-  --color-green5: hsl(153, 15%, 10%);
+  --color-pastel3: hsl(261, 45%, 30%);
+  --color-pastel4: hsl(261, 15%, 15%);
+  --color-pastel5: hsl(261, 15%, 10%);
 
   /* website title colors */
   --color-main-title: var(--color-pastel2);

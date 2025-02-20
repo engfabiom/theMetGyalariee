@@ -1,38 +1,43 @@
 [data-theme="psychedelic"] {
-  /* website title colors */
+  /* a scale of pastel */
+  --color-psy1: hsl(70, 74%, 12%);
+  --color-psy2: hsl(9, 44%, 43%);
+  --color-psy3: hsl(293, 70%, 74%);
+  --color-psy4: hsl(187, 71%, 86%);
+  --color-psy5: hsl(54, 82%, 73%);
 
-  --color-main-title: crimson;
-  --color-main-title--shadow: darkorchid;
+  /* website title colors */
+  --color-main-title: var(--color-psy2);
+  --color-main-title--shadow: var(--color-psy3);
 
   /* text colors */
-  --color-text-primary: cyan;
-  --color-text-discreet: var(--color-gray5);
+  --color-text-primary: var(--color-psy1);
+  --color-text-discreet: var(--color-psy2);
 
-  --color-text--hover-primary: var(--color-rosybrown2);
-  --color-text--hover-strong: var(--color-rosybrown3);
+  --color-text--hover-primary: var(--color-psy3);
+  --color-text--hover-strong: var(--color-psy2);
 
   /* background colors */
-  --color-bg-primary: lemonchiffon;
-  --color-bg--hover: lightsteelblue;
+  --color-bg-primary: var(--color-psy4);
+  --color-bg-secondary: var(--color-psy5);
+  --color-bg-strong: var(--color-gray1);
+  --color-bg--hover: var(--color-psy3);
 
   /*box shadow */
-  --color-shadow-light: mediumseagreen;
-  --color-shadow-strong: mediumturquoise;
+  --color-shadow-light: var(--color-psy1);
+  --color-shadow-strong: var(--color-psy3);
 
-  /* button colors */
+  /* button colors and sort-of-buttons */
+  --color-btn-discreet: var(--color-psy3);
+  --color-btn-discreet--hover: var(--color-psy2);
 
-  --color-btn-primary: var(orange);
-  --color-btn-primary--hover: var(--color-rosybrown2);
+  --color-btn-primary: var(--color-psy4);
+  --color-btn-primary--hover: var(--color-psy3);
 
-  --color-btn-discreet: var(purple);
-  --color-btn-discreet--hover: var(--color-rosybrown2);
-
-  /* togle colors */
   --color-togle-primary: var(--color-white);
-  --color-togle-secondary: var(--color-rosybrown3);
+  --color-togle-secondary: var(--color-psy3);
   --color-togle-border: var(--color-gray2);
 
-  /*Checkbox colors */
   --color-checkbox: var(--color-gray1);
 
   /*border colors */

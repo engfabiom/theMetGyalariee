@@ -13,12 +13,13 @@
 
   /* background colors */
   --color-bg-primary: var(--color-gray7);
+  --color-bg-secondary: var(--color-gray6);
   --color-bg-strong: var(--color-gray3); 
-  --color-bg--hover: var(--color-gray6);
+  --color-bg--hover: var(--color-gray5);
 
   /*box shadow */
-  --color-shadow-light: var(--color-gray5);
-  --color-shadow-strong: var(--color-gray4);
+  --color-shadow-light: var(--color-gray7);
+  --color-shadow-strong: var(--color-gray8);
 
   /* button colors and sort-of-buttons */
   --color-btn-discreet: var(--color-gray2);

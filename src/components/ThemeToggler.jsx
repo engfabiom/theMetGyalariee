@@ -3,7 +3,7 @@ import "../css/themeColors/themeDefault.css";
 import "../css/themeColors/themeDark.css";
 import "../css/themeColors/themeGreen.css";
 import "../css/themeColors/themePastel.css";
-import "../css/themeColors/themeFabio.css";
+import "../css/themeColors/themeDarkPastel.css";
 import "../css/themeColors/themePsychedelic.css";
 import { useDispatch, useSelector } from "react-redux";
 import {setColorTheme} from "../redux/rootActions"
@@ -31,7 +31,7 @@ const ThemeToggler = () => {
         <optgroup label="Custom">
           <option value="green">Green</option>
           <option value="pastel">Pastel</option>
-          <option value="fabio">Fabio</option>
+          <option value="dark-pastel">Dark Pastel</option>
           <option value="psychedelic">Psychedelic</option>
         </optgroup>
       </select>

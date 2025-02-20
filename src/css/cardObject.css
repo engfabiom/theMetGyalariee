@@ -2,7 +2,7 @@
 .card {
   height: 100%;
   display: flex;
-  background-color: var(--color-bg-primary);
+  background-color: var(--color-bg-secondary);
   gap: 2rem;
   justify-content: start;
   align-items: center;

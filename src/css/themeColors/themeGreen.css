@@ -1,10 +1,11 @@
 [data-theme="green"] {
 
     /* a scale of green */
-    --color-green1: #edf6f2;
-    --color-green2: #618f7b;
-    --color-green3: #2a6c54;
-    --color-green4: #212e2a; 
+    --color-green1: hsl(153, 35%, 15%);
+    --color-green2: hsl(153, 20%, 50%);
+    --color-green3: hsl(153, 45%, 80%);
+    --color-green4: hsl(153, 15%, 90%);
+    --color-green5: hsl(153, 15%, 85%);
 
   /* website title colors */
   --color-main-title: var(--color-green2);
@@ -19,6 +20,7 @@
 
   /* background colors */
   --color-bg-primary: var(--color-green4);
+  --color-bg-secondary: var(--color-green5);
   --color-bg-strong: var(--color-gray1); 
   --color-bg--hover: var(--color-green3);
 
