@@ -6,7 +6,7 @@
 
   /* text colors */
   --color-text-primary: var(--color-gray2);
-  --color-text-discreet: var(--color-gray5);
+  --color-text-discreet: var(--color-gray4);
 
   --color-text--hover-primary: var(--color-rosybrown2);
   --color-text--hover-strong: var(--color-rosybrown3);

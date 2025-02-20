@@ -1,0 +1,45 @@
+[data-theme="dark-purple"] {
+  /* a scale of purple */
+  --color-purple1: hsl(261, 35%, 95%);
+  --color-purple2: hsl(261, 20%, 50%);
+  --color-purple3: hsl(261, 45%, 30%);
+  --color-purple4: hsl(261, 15%, 15%);
+  --color-purple5: hsl(261, 15%, 10%);
+
+  /* website title colors */
+  --color-main-title: var(--color-purple2);
+  --color-main-title--shadow: var(--color-purple3);
+
+  /* text colors */
+  --color-text-primary: var(--color-purple1);
+  --color-text-discreet: var(--color-purple2);
+
+  --color-text--hover-primary: var(--color-purple2);
+  --color-text--hover-strong: var(--color-purple1);
+
+  /* background colors */
+  --color-bg-primary: var(--color-purple4);
+  --color-bg-secondary: var(--color-purple5);
+  --color-bg-strong: var(--color-gray1);
+  --color-bg--hover: var(--color-purple3);
+
+  /*box shadow */
+  --color-shadow-light: var(--color-purple4);
+  --color-shadow-strong: var(--color-purple5);
+
+  /* button colors and sort-of-buttons */
+  --color-btn-discreet: var(--color-purple3);
+  --color-btn-discreet--hover: var(--color-purple2);
+
+  --color-btn-primary: var(--color-purple4);
+  --color-btn-primary--hover: var(--color-purple3);
+
+  --color-togle-primary: var(--color-white);
+  --color-togle-secondary: var(--color-purple3);
+  --color-togle-border: var(--color-gray2);
+
+  --color-checkbox: var(--color-gray1);
+
+  /*border colors */
+  --color-border-primary: var(--color-gray2);
+}
